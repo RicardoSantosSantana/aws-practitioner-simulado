@@ -4,8 +4,10 @@ export default class Perguntas{
     #pergunta
     #opcoes
     #resposta
-    private _quantidade_perguntas:Number = 1;
+    static totAcertos:Number=0;
 
+    private _quantidade_perguntas:Number = 1;
+        
     set quantidadePerguntas(qtd:Number){
         this._quantidade_perguntas = qtd;        
     }
@@ -36,12 +38,12 @@ export default class Perguntas{
     }
     
     adcionarID(dados){
-        const adicionarID = (prev,atual,idx)=>{
+        const addID = (prev,atual,idx)=>{
             prev.push( { 'id':idx+1000, ...atual } ) 
             return prev
        }
 
-      return dados.reduce(adicionarID,[] )
+      return dados.reduce(addID,[] )
       
     }
   

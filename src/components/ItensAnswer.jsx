@@ -1,14 +1,8 @@
-import styles from '../styles/Home.module.css'
-import { spaceTounderscore } from '../functions/utils.js'
-
 export default function ItensAnswer( props ){
  
     const id_answer = props.data.id;
-    const answer = props.data.answer;
- console.log(props);
-
-    const make_answer = (el,idx) => {
-     
+    const answer = props.answer;
+    const make_answer = (el,idx) => {     
          
         const answer_item_value = Object.keys(el);
         const answer_item_key = Object.values(el);  
@@ -34,29 +28,16 @@ export default function ItensAnswer( props ){
                 &nbsp;<label htmlFor={key_radio} > {answer_item_value} </label>                        
             </p>
         ) 
-        console.group(key_radio)
       
-            console.log('key_radio = ',key_radio)
-            console.log('answer.length = ',answer)
-            console.log('answer = ',answer)
-            console.groupEnd();
     
-        if(props.data.answer){ 
-            console.log('ENTGROU AQUI')
-            const with_answer = props.data.answer.id == key_radio ? selected:  no_selected
+        if(props.answer){             
+            const with_answer = props.answer.id == key_radio ? selected:  no_selected
             return with_answer
         }
-        else{
-            console.log('ENTGROU nao entrou')
+        else{      
             return retorno_undefined
         }
         
-
-        
-        
     }
-
-  
-     return props.data.opcoes.map(make_answer)  
-   
+    return props.data.opcoes.map(make_answer)
 }

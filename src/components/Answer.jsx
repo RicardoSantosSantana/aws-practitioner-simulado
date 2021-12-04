@@ -27,8 +27,6 @@ import withRouter from "next/dist/client/with-router";
         </div>  
     )
   
-    return answer.right_answer ? success : fail 
-
-            
+    return answer.right_answer ? success : fail  
     
 }
