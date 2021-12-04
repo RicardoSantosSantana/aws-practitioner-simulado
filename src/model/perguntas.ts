@@ -23,15 +23,27 @@ export default class Perguntas{
     get fakeArrayQuestions():any {        
         return Array.from(Array(this.totQuestion).keys())
     } 
+
+
     get perguntasRamdomizadas():any{
         const dados =  this.randomizeQuestions.map(el=>this.listaPerguntas[el])
-        return this.filtro(dados);
+        const withFiltro = this.filtro(dados);
+        return this.adcionarID(withFiltro);
     }
 
     filtro(dados){
         return dados.filter((el,index)=>index<this._quantidade_perguntas);
     }
     
-    
+    adcionarID(dados){
+        const adicionarID = (prev,atual,idx)=>{
+            prev.push( { 'id':idx+1000, ...atual } ) 
+            return prev
+       }
+
+      return dados.reduce(adicionarID,[] )
+      
+    }
+  
      
 }

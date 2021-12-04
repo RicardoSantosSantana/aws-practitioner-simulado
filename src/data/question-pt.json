@@ -1,5 +1,5 @@
 [
-    {
+   {
     "pergunta": "Por que a AWS é mais econômica do que os datacenters tradicionais para aplicações com diferentes workloads de computação?",
     "opcoes":[
         {"A) Os custos do Amazon EC2 são cobrados mensalmente.":false},
@@ -9,7 +9,7 @@
     ],
     "resposta": "C – A capacidade de executar instâncias sob demanda quando necessário permite que os usuários executem e encerrem instâncias em resposta a uma workload variável. Essa é uma prática mais econômica do que comprar servidores on-premises suficientes para lidar com o pico de carga."
     },
-    
+             
     {
         "pergunta": "Qual serviço da AWS simplificaria a migração de um banco de dados para a AWS?",
         "opcoes":[

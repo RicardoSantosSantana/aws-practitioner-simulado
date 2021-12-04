@@ -5,7 +5,7 @@ import  Perguntas  from '../model/perguntas.ts';
 export function getServerSideProps(){
 
     const pergunta = new Perguntas();
-    pergunta.quantidadePerguntas =8; 
+    pergunta.quantidadePerguntas =1; 
        
     return {
         props: { 
@@ -15,10 +15,12 @@ export function getServerSideProps(){
 }
 
 export default function Home(props) {
-     
+ 
     return (
         <>        
         <Simulado data={props.data}></Simulado>
         </>
     )
 }
+
+

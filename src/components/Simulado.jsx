@@ -1,8 +1,8 @@
 import Questions from '../components/Question';
 export function Simulado(props){
 
-    const simulado =  props.data.map((el,index)=>{
-        return <Questions data={el} key={index}></Questions>  
+    const simulado =  props.data.map((el)=>{
+        return <Questions data={el} key={el.id}></Questions>  
     });
  
   

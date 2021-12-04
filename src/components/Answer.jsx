@@ -1,8 +1,11 @@
 import withRouter from "next/dist/client/with-router";
 
- export default function Answer( { answer,resposta } = props ){
-    
-    if(answer.right_answer==undefined) return ""
+ export default function Answer( props ){
+ 
+    const answer = props.answer;
+    const resposta = props.data.resposta;
+  
+    if(!answer) return ""
      
     const success = (
             <div className="card text-light bg-success mb-3" >
@@ -25,6 +28,7 @@ import withRouter from "next/dist/client/with-router";
     )
   
     return answer.right_answer ? success : fail 
+
             
     
 }

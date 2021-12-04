@@ -5,11 +5,11 @@ import { useState } from "react";
  
 export default function Questions(props){
  
-    const { pergunta, opcoes,resposta} = props.data 
+    const { pergunta , id} = props.data 
   
-    const chave = spaceTounderscore(pergunta);
-
-    const [ answered, setAnswered ] = useState([]);
+    const chave = `${id}_radio`;
+   
+    const [ answered, setAnswered ] = useState();
 
     
     function verifyAnswer(){     
@@ -19,18 +19,10 @@ export default function Questions(props){
                 if(rb.checked) {
                     
                     if(rb.getAttribute('right_answer')=="true"){
-                        setAnswered({
-                                        "right_answer":true,
-                                        "id":rb.getAttribute('id')
-                                    });
+                        setAnswered({ "right_answer":true,"id":rb.getAttribute('id') });
                         break;
                     } else {                        
-                        setAnswered(
-                            {
-                                "right_answer":false,
-                                "id":rb.getAttribute('id')
-                            }
-                        );
+                        setAnswered({ "right_answer":false,"id":rb.getAttribute('id') });
                         break;
                     }
                 }              
@@ -40,19 +32,17 @@ export default function Questions(props){
    
      const btnAnswer =()=> {
          
-         return answered.right_answer==undefined ? (
-         <a href="#" onClick={verifyAnswer} className="btn btn-primary">Confirmar Resposta</a>
-         ) : '';
+         return  <a href="#" onClick={verifyAnswer} className="btn btn-primary">Confirmar Resposta</a>
      }
  
         return (
-            <div className="card" id={`card_${chave}`}>
+            <div className="card" id={chave}>
                 <div className="card-header">
                     <h5 className="card-title">{pergunta}</h5>                   
                 </div>
                 <div className="card-body">                    
-                    <ItensAnswer key={chave}  answer={answered}  className="list-group-item list-group-item-action" pergunta={chave} opcoes={opcoes}></ItensAnswer> 
-                    <Answer answer={answered} resposta={resposta}></Answer>
+                    <ItensAnswer data={props.data}  answer={answered}  className="list-group-item list-group-item-action"></ItensAnswer> 
+                    <Answer data={props.data} answer={answered}  ></Answer>
                     {btnAnswer()}
                     
                 </div>
