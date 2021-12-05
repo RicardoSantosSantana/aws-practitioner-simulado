@@ -112,9 +112,9 @@ const te =  comID.sort(() => Math.random() - 0.5);
 const a =  te.filter((el,index)=>index<3);
 console.log(a)
 
-<<<<<<< HEAD
+
 const soma = (a,b) => (a+b)*4;
-=======
+
 function fazerPosGraduacao(){
     return { 
         "instituicao":"PUC",
@@ -122,4 +122,11 @@ function fazerPosGraduacao(){
         "tipo":"Pos Graduacao"
     }
 }
->>>>>>> 117d255a0c4b07691ad93789a91118d68409748b
+
+function fazerPosGraduacao2(){
+    return { 
+        "instituicao":"PUC",
+        "curso":"Especialista em desenvolvimento FullStack",
+        "tipo":"Pos Graduacao"
+    }
+}
