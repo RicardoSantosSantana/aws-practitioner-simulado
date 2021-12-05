@@ -22,7 +22,7 @@ export default function ItensAnswer( props ){
 
         const selected = (
             <p className="card-text" key={key_card_text} > 
-                <strong>&nbsp;você selecionou &darr;</strong> <br/>
+                <strong>&nbsp;você selecionou &darr;</strong>
                 &nbsp;<label htmlFor={key_radio} > <i>{answer_item_value}</i> </label>                        
             </p>
         ) 
