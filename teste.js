@@ -112,4 +112,4 @@ const te =  comID.sort(() => Math.random() - 0.5);
 const a =  te.filter((el,index)=>index<3);
 console.log(a)
 
-const soma = (a,b) => a+b;
+const soma = (a,b) => (a+b)*4;
