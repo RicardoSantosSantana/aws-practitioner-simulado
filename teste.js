@@ -111,3 +111,11 @@ const comID = dados.reduce(adicionarID,[] )
 const te =  comID.sort(() => Math.random() - 0.5);
 const a =  te.filter((el,index)=>index<3);
 console.log(a)
+
+function fazerPosGraduacao(){
+    return { 
+        "instituicao":"PUC",
+        "curso":"Especialista em desenvolvimento FullStack",
+        "tipo":"Pos Graduacao"
+    }
+}
