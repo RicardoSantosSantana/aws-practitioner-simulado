@@ -17,8 +17,7 @@ export function getServerSideProps(){
 
 
 export default function Home(props) {
-  console.log(props)
-  
+   
     const { acertos, erros } = useContext(ContextSimulacao); 
     return (        
         <main className="container">                            

@@ -12,7 +12,7 @@ export default function Questions(props){
     const chave = `${id}_radio`;   
     const [ answered, setAnswered ] = useState();
     const btnAnswer =()=> {
-        if(!answered) return  <a href="#" onClick={verifyAnswer} className="btn btn-primary">Confirmar Resposta</a>
+        if(!answered) return  <button onClick={verifyAnswer} className="btn btn-primary">Confirmar Resposta</button>
     }
 
     function verifyAnswer(e){     
@@ -20,7 +20,7 @@ export default function Questions(props){
         const rbs = document.querySelectorAll(`input[name="${chave}"]`);     
      
         for (const rb of rbs) {
-                if(rb.checked) {
+                if(rb.checked) {                    
                     
                     if(rb.getAttribute('right_answer')=="true"){
                         setAcertos(acertos +1)                
