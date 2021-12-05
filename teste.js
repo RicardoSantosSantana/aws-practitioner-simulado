@@ -108,5 +108,6 @@ dados = [
     }
 
 const comID = dados.reduce(adicionarID,[] )
-
-console.log(comID)
+const te =  comID.sort(() => Math.random() - 0.5);
+const a =  te.filter((el,index)=>index<3);
+console.log(a)

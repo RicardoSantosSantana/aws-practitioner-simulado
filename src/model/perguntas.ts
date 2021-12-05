@@ -4,46 +4,44 @@ export default class Perguntas{
     #pergunta
     #opcoes
     #resposta
-    static totAcertos:Number=0;
+    
+    static totAcertos:any;
+    private _dados:any;
 
     private _quantidade_perguntas:Number = 1;
-        
+    
+    constructor(){
+        this._dados = questionJson 
+    }
     set quantidadePerguntas(qtd:Number){
         this._quantidade_perguntas = qtd;        
     }
 
-    get listaPerguntas():any{
-        return questionJson 
+     get listaPerguntas():any{        
+        return this._dados
     }    
-    get randomizeQuestions():Array<any> {
-        return this.fakeArrayQuestions.sort(() => Math.random() - 0.5);
-    }
-    
-     get totQuestion(){
+  
+    get totQuestion(){
         return this.listaPerguntas.length;
     }
-    get fakeArrayQuestions():any {        
-        return Array.from(Array(this.totQuestion).keys())
-    } 
-
-
-    get perguntasRamdomizadas():any{
-        const dados =  this.randomizeQuestions.map(el=>this.listaPerguntas[el])
-        const withFiltro = this.filtro(dados);
-        return this.adcionarID(withFiltro);
+    
+    get perguntasRamdomizadas():any{  
+        this.filtro()                      
+        this.adcionarID();
+        return this._dados;
     }
 
-    filtro(dados){
-        return dados.filter((el,index)=>index<this._quantidade_perguntas);
+    filtro(){
+        this._dados = this._dados.filter((el,index)=>index<this._quantidade_perguntas).sort(() => Math.random() - 0.5);;
     }
     
-    adcionarID(dados){
+    adcionarID(){
         const addID = (prev,atual,idx)=>{
             prev.push( { 'id':idx+1000, ...atual } ) 
             return prev
        }
 
-      return dados.reduce(addID,[] )
+       this._dados =  this._dados.reduce(addID,[] )
       
     }
   

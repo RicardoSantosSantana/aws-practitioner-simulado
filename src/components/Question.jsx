@@ -1,11 +1,13 @@
 import ItensAnswer from "./ItensAnswer"
 import Answer from "./Answer"
-import React, { useState } from "react";
-import  Perguntas  from '../model/perguntas.ts';
+import React, { useContext, useState } from "react";
+
+import { ContextSimulacao } from "../context";
+
 export default function Questions(props){
  
-  
-    
+  const { acertos,setAcertos, erros, setErros } = useContext(ContextSimulacao);
+ 
     const { pergunta , id} = props.data   
     const chave = `${id}_radio`;   
     const [ answered, setAnswered ] = useState();
@@ -13,31 +15,32 @@ export default function Questions(props){
         if(!answered) return  <a href="#" onClick={verifyAnswer} className="btn btn-primary">Confirmar Resposta</a>
     }
 
-    function verifyAnswer(){     
+    function verifyAnswer(e){     
         
         const rbs = document.querySelectorAll(`input[name="${chave}"]`);     
      
         for (const rb of rbs) {
                 if(rb.checked) {
-                  
+                    
                     if(rb.getAttribute('right_answer')=="true"){
-                        const totaldeAcertos = Perguntas.totAcertos;
-                        Perguntas.totAcertos = totaldeAcertos + 1;
-                      
+                        setAcertos(acertos +1)                
                         setAnswered({ "right_answer":true,"id":rb.getAttribute('id') });
                         break;
-                    } else {                        
+                    } else {                  
+                        setErros(erros +1)      
                         setAnswered({ "right_answer":false,"id":rb.getAttribute('id') });
                         break;
                     }
                 }              
         }
+        e.stopPropagation();
 
     }
    
    
  
-    return (
+    return (<>
+    <br></br>
         <div className="card" id={chave}>
             <div className="card-header">
                 <h5 className="card-title">{pergunta}</h5>                   
@@ -49,5 +52,6 @@ export default function Questions(props){
                 
             </div>
         </div>
+        </>
     )
 }

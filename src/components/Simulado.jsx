@@ -1,15 +1,11 @@
+ 
 import Questions from '../components/Question';
-export function Simulado(props){
-
-    const simulado =  props.data.map((el)=>{
+  
+export default function Simulado({data}=props){
+     
+    const simulado =  data.map((el)=>{
         return <Questions data={el} key={el.id}></Questions>  
     });
- 
-  
-  return (
-      <div className="container">
-         { simulado }
-      </div> 
-    )
 
+    return simulado
 }
