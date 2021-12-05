@@ -20,7 +20,8 @@ export default function Home(props) {
    
     const { acertos, erros } = useContext(ContextSimulacao); 
     return (        
-        <main className="container">                            
+        <main className="container">
+            <h1>Mirian estude</h1>                       
             <Nav><Results errors={erros} successes={acertos}/></Nav>                                
             <Simulado data={props.data}></Simulado>
         </main>    
