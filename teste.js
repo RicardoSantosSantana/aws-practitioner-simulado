@@ -119,3 +119,10 @@ function fazerPosGraduacao(){
         "tipo":"Pos Graduacao"
     }
 }
+function fazerPosGraduacao2(){
+    return { 
+        "instituicao":"PUC",
+        "curso":"Especialista em desenvolvimento FullStack",
+        "tipo":"Pos Graduacao"
+    }
+}
