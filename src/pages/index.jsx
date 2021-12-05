@@ -6,7 +6,8 @@ import  Perguntas  from '../model/perguntas.ts';
 export function getServerSideProps(){
 
     const pergunta = new Perguntas();
-    pergunta.quantidadePerguntas =8; 
+    pergunta.quantidadePerguntas = pergunta.totQuestion;
+    
        
     return {
         props: { 
@@ -20,12 +21,10 @@ export default function Home(props) {
    
     const { acertos, erros } = useContext(ContextSimulacao); 
     return (        
-        <main className="container">
-          
-            <Nav><Results errors={erros} successes={acertos}/></Nav>   
-            <h1>Aprender a aprender a estudar</h1>                                                    
-            <Simulado data={props.data}></Simulado>
-        </main>    
+            <div className="container">          
+                <Nav><Results errors={erros} successes={acertos} length = {props.data.length} /></Nav>                                                                 
+                <Simulado data={props.data}></Simulado>
+            </div>        
         )
  
 }

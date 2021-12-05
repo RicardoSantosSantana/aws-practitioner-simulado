@@ -40,17 +40,17 @@ export default function Questions(props){
    
  
     return (<>
-    <br></br>
-        <div className="card" id={chave}>
+         
+        <div className="card  mb-2" id={chave}>
             <div className="card-header">
-                <h5 className="card-title">{pergunta}</h5>                   
+                <h5 className="card-title">#{id} - {pergunta}</h5>                   
             </div>
             <div className="card-body">                    
                 <ItensAnswer data={props.data}  answer={answered}  className="list-group-item list-group-item-action"></ItensAnswer> 
                 <Answer data={props.data} answer={answered}  ></Answer>              
-                {btnAnswer()}
-                
+                {btnAnswer()}                
             </div>
+      
         </div>
         </>
     )

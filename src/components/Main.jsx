@@ -1,39 +1,31 @@
- export function Nav({children}){
+import Header from "./Header"
+
+export function Nav({children}){
     return (<>
-        <div className="container">
-            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div className="container ">
+            <nav className="navbar  navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div className="container-fluid">
-                    <div className="navbar-brand">{children}</div>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"></button> 
-                </div>
-            </nav>
+                    <div className="navbar-brand">
+                        <h4>Simulado AWS Practitioner</h4>
+                        </div>
+                    {children}                    
+                </div> 
+            </nav>  
         </div>
-        <div className="bg-light p-5 rounded"></div>   
+        <Header></Header>
+       
         </>
     )
 }
 
-export function Results( { errors, successes } = props ){
+export function Results( { errors, successes, length } = props ){
 
     return (
-        
-        <div className="container">
-            Simulado AWS Practitioner &nbsp;  &nbsp;  &nbsp;
-            <button type="button" className="btn btn-primary position-relative">
-            Meus Acertos
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                    {successes}        
-                </span>
-            </button>
-            &nbsp;  &nbsp;  &nbsp;
-            <button type="button" className="btn btn-warning position-relative">
-            Meus Erros
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {errors}        
-                </span>
-            </button>
-        </div>
-     
+            <div className="d-flex  border border border-1 rounded ">
+                <div className="p-2 bg-transparent text-light">Total Perguntas - <strong>{length}</strong></div>
+                <div className="p-2 bg-info  ">Acertos - <strong>{successes}</strong></div>                
+                <div className="p-2 bg-warning  text-dark">Erros - <strong>{errors}</strong> </div>            
+            </div>     
         )    
     }
     

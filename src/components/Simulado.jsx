@@ -7,5 +7,11 @@ export default function Simulado({data}=props){
         return <Questions data={el} key={el.id}></Questions>  
     });
 
-    return simulado
+    return (
+        <div className="border p-2  border border-1 rounded">    
+            {simulado}
+        </div>
+
+    )
+    
 }

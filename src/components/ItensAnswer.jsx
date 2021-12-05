@@ -12,8 +12,11 @@ export default function ItensAnswer( props ){
 
         const retorno_undefined = (
             <p className="card-text" key={key_card_text} >
+                                
+                <label htmlFor={key_radio} >
                 <input type="radio" right_answer={ answer_item_key } name={id_name_radio} id={key_radio}/>
-                &nbsp;<label htmlFor={key_radio} > {answer_item_value} </label>                        
+                &nbsp;   {answer_item_value} </label>
+                
             </p>
         )
 
