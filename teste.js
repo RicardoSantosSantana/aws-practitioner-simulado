@@ -113,6 +113,9 @@ const a =  te.filter((el,index)=>index<3);
 console.log(a)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ricardo
 
 const soma = (a,b) => (a+b)*4;
 
@@ -131,6 +134,9 @@ function fazerPosGraduacao2(){
         "tipo":"Pos Graduacao"
     }
 }
+<<<<<<< HEAD
 =======
 const soma = (a,b) => (a+b)*4;
 >>>>>>> da75a3de26cc12e3f5e9160bfd6eee468cda9508
+=======
+>>>>>>> ricardo
