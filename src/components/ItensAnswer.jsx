@@ -1,5 +1,8 @@
 export default function ItensAnswer( props ){
  
+ 
+    const textToHTML = str => <span dangerouslySetInnerHTML={{__html: str}}/> 
+                   
     const id_answer = props.data.id;
     const answer = props.answer;
     const make_answer = (el,idx) => {     
@@ -15,7 +18,7 @@ export default function ItensAnswer( props ){
                                 
                 <label htmlFor={key_radio} >
                 <input type="radio" right_answer={ answer_item_key } name={id_name_radio} id={key_radio}/>
-                &nbsp;   {answer_item_value} </label>
+                &nbsp;  { textToHTML(answer_item_value) } </label>
                 
             </p>
         )

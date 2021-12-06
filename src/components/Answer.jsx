@@ -1,7 +1,8 @@
 import withRouter from "next/dist/client/with-router";
 
  export default function Answer( props ){
- 
+    const textToHTML = str => <span dangerouslySetInnerHTML={{__html: str}}/> 
+                   
     const answer = props.answer;
     const resposta = props.data.resposta;
   
@@ -12,7 +13,7 @@ import withRouter from "next/dist/client/with-router";
                 <div className="card-header">PARABÉNS</div>
                     <div className="card-body">
                         <h5 className="card-title">Resposta Correta</h5>
-                        <p className="card-text">{resposta}</p>           
+                        <p className="card-text">{textToHTML(resposta)}</p>           
                     </div>
             </div>  
     )
@@ -22,7 +23,7 @@ import withRouter from "next/dist/client/with-router";
             <div className="card-header">NÃO FOI DESSA VEZ</div>
                 <div className="card-body">
                     <h5 className="card-title">Resposta Correta</h5>
-                    <p className="card-text">{resposta}</p>           
+                    <p className="card-text">{textToHTML(resposta)}</p>           
                 </div>
         </div>  
     )
