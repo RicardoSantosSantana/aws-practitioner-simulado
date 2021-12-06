@@ -265,6 +265,7 @@
     },
     {
         "pergunta": "Qual serviço podemos utilizar para criar um usuário administrativo no AWS?",
+<<<<<<< Updated upstream
         "opcoes":[
             {"A) IAM":true},
             {"B) Amazon EC2":false},
@@ -447,6 +448,23 @@
             {"B) Antivírus do cliente está apresentando falso-positivo no objeto do bucket S3":false},
             {"C) O Bucket está em privado e o objeto está em privado.":false},
             {"D) A URL do bucket S3 enviada para o cliente está errada.":false}
+=======
+        "opcoes":[
+            {"A) IAM":true},
+            {"B) Amazon EC2":false},
+            {"C) Amazon S3":false},
+            {"D) AWS Artifact":false}
+        ],
+        "resposta": "A - <strong>IAM</strong> significa: Identity and Access Management" 
+    },
+    {
+        "pergunta": "A área de desenvolvimento solicitou suporte na federação de login no aplicativo da empresa. Qual serviço da AWS você sugere utilizar?",
+        "opcoes":[
+            {"A) Amazon EC2":false},
+            {"B) Route 53":false},
+            {"C) Credencial de Acesso Temporário":false},
+            {"D) Amazon Cognito":true}
+>>>>>>> Stashed changes
         ],
         "resposta": "C - Access Denied significa que o bucket está privado e o objeto está em privado. Mude-os para público." 
     },
