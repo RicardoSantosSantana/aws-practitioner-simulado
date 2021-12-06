@@ -1,6 +1,9 @@
+import estilo from '../styles/ItensAnswer.module.css'
+
 export default function ItensAnswer( props ){
+    
  
- 
+
     const textToHTML = str => <span dangerouslySetInnerHTML={{__html: str}}/> 
                    
     const id_answer = props.data.id;
@@ -14,24 +17,27 @@ export default function ItensAnswer( props ){
         const id_name_radio = `${id_answer}_radio`;
 
         const retorno_undefined = (
-            <p className="card-text" key={key_card_text} >
+ 
+            <p className="card-text" key={key_card_text}   >
                                 
-                <label htmlFor={key_radio} >
+                <label htmlFor={key_radio} className={estilo.cursor} >
                 <input type="radio" right_answer={ answer_item_key } name={id_name_radio} id={key_radio}/>
                 &nbsp;  { textToHTML(answer_item_value) } </label>
                 
             </p>
+            
         )
 
         const selected = (
-            <p className="card-text" key={key_card_text} > 
-                <strong>&nbsp;você selecionou &darr;</strong>
-                &nbsp;<label htmlFor={key_radio} > <i>{answer_item_value}</i> </label>                        
+            <p className="card-text" key={key_card_text} >                 
+                &nbsp;<label htmlFor={key_radio} > <strong>{textToHTML(answer_item_value)}</strong> </label>                        
             </p>
         ) 
         const no_selected = (
             <p className="card-text" key={key_card_text} >            
-                &nbsp;<label htmlFor={key_radio} > {answer_item_value} </label>                        
+                &nbsp;<label htmlFor={key_radio} style={{
+                    color:'#91908F'
+                }}> {textToHTML(answer_item_value)} </label>
             </p>
         ) 
       

@@ -153,8 +153,8 @@
      {
          "pergunta": "Em uma entrevista de emprego, foi lhe perguntando o que é Escalabilidade Vertical na Nuvem.",
          "opcoes":[
-             {"A) Escalabilidade vertical é aumentar a quantidade de instâncias":true},
-             {"B) Escalabilidade vertical é aumentar o poder computacional da instância":false}            
+             {"A) Escalabilidade vertical é aumentar a quantidade de instâncias":false},
+             {"B) Escalabilidade vertical é aumentar o poder computacional da instância":true}            
          ],
          "resposta": "B - Correto! Exemplo é possuir um t2.micro e dar um upgrade para t2.large" 
      },
