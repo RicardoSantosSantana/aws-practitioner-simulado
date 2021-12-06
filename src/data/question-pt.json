@@ -252,7 +252,8 @@
             {"D) Todas as anteriores.":true}
         ],
         "resposta": "D - Todas as anteriores." 
-    },    {
+    },    
+    {
         "pergunta": "Você está com receio que algum usuário não autorizado esteja tentando ganhar acesso em alguns serviços no seu ambiente AWS. Qual o serviço que permite melhorar a segurança do seu aplicativo web?",
         "opcoes":[
             {"A) Amazon Shield":false},
@@ -263,73 +264,241 @@
         "resposta": "C - Sim, o <strong>AWS WAF</strong> é um firewall de aplicativos web." 
     },
     {
-        "pergunta": "",
+        "pergunta": "Qual serviço podemos utilizar para criar um usuário administrativo no AWS?",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) IAM":true},
+            {"B) Amazon EC2":false},
+            {"C) Amazon S3":false},
+            {"D) AWS Artifact":false}
         ],
-        "resposta": "" 
+        "resposta": "A - <strong>IAM</strong> significa: Identity and Access Management." 
     },
     {
-        "pergunta": "",
+        "pergunta": "A área de desenvolvimento solicitou suporte na federação de login no aplicativo da empresa. Qual serviço da AWS você sugere utilizar?",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) Amazon EC2":false},
+            {"B) Route 53":false},
+            {"C) Credencial de Acesso Temporário":false},
+            {"D) Amazon Cognito":true}
         ],
-        "resposta": "" 
+        "resposta": "D - Sim, o <strong>Amazon Cognito</strong> é para federação de login. O Amazon Cognito fornece autenticação, autorização e gerenciamento de usuários para suas aplicações Web e móveis. Seus usuários podem fazer login diretamente com um nome de usuário e uma senha ou por meio de terceiros, como o Facebook, a Amazon, o Google ou a Apple." 
     },
     {
-        "pergunta": "",
+        "pergunta": "O site da sua empresa está sofrendo constantes ataques de DDoS. Qual serviço podemos ativar para mitigar estes ataques?",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) Amazon Cognito":false},
+            {"B) AWS Shield":true},
+            {"C) AWS WAF":false},
+            {"D) AWS IAM":false}
         ],
-        "resposta": "" 
+        "resposta": "Sim, o <strong>AWS Shield</strong> tem como características a proteção contra ataques DDoS. Um ataque Distributed Denial of Service (DDoS – ataques distribuídos de negação de serviço) é um ataque em que vários sistemas comprometidos lançam um flood em um destino, como uma rede de dados ou aplicações web, com tráfego. Um ataque DDoS pode evitar que usuários legítimos acessem um serviço e pode fazer com que o sistema falhe por conta do grande volume de tráfego.<p>A AWS fornece dois níveis de proteção contra ataques DDoS: AWS Shield Standard e AWS Shield Advanced.</p>" 
+    },
+    { 
+        "pergunta": "O desenvolvedor da sua equipe perguntou quais são as linguagens de programação que estão disponíveis para começar a desenvolver no ambiente AWS. E você respondeu:",
+        "opcoes":[
+            {"A) C++, Python e Ruby":false},
+            {"B) Java, JavaScript e PHP":false},
+            {"C) Go, .NET, Node.js":false},
+            {"D) Todas as anteriores":true}
+        ],
+        "resposta": "D - Ao total existem nove (09) linguagens disponíveis para desenvolver e gerenciar aplicativos na AWS." 
     },
     {
-        "pergunta": "",
+        "pergunta": "Qual serviço da AWS torna mais fácil para você criar e gerenciar chaves e controlar o uso de criptografia em uma ampla gama de serviços da AWS e em seus aplicativos?",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) AWS Shield":true},
+            {"B) AWS KMS":true},
+            {"C) AWS Secrets Manager":false},
+            {"D) AWS WAF":false}
         ],
-        "resposta": "" 
+        "resposta": "B - O <strong>AWS Key Management Service (AWS KMS)</strong> é um serviço gerenciado que facilita a criação e o controle de chaves de criptografia usadas para criptografar dados. Para proteger e validar suas AWS KMS keys, o AWS KMS usa módulos de segurança de hardware (HSMs) de acordo com o Programa de validação de módulos criptográficos FIPS 140-2, exceto nas regiões China (Pequim) e China (Ningxia). O AWS KMS é integrado à maioria dos serviços da AWS que criptografam seus dados. O AWS KMS também é integrado ao AWS CloudTrail para registrar em log o uso das suas chaves do KMS para necessidades de auditoria, regulamentação e conformidade."
     },
     {
-        "pergunta": "",
+        "pergunta": "Após criar os acessos no seu ambiente, você criou um grupo, definiu suas permissões e adicionou os usuários. Porém, surgiu uma dúvida: É possível adicionar um grupo dentro deste grupo?",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) Sim":false},
+            {"B) Não":true}            
         ],
-        "resposta": "" 
+        "resposta": "B - Não é permitido criar grupo dentro de grupo." 
     },
     {
-        "pergunta": "",
+        "pergunta": "Qual é o conceito do princípio least privilege?",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) Na AWS, o conceito de least privilege (privilégio mínimo) significa que você fornece aos usuários apenas as permissões necessárias para realizar uma tarefa.":true},
+            {"B) Na AWS, o conceito de least privilege (privilégio mínimo) significa que você fornece aos usuários permissão total para realizarem qualquer tarefa.":false}            
         ],
-        "resposta": "" 
+        "resposta": "A - Ao criar políticas da IAM, siga a orientação de segurança padrão de concessão de privilégio mínimo ou conceda apenas as permissões necessárias para realizar uma tarefa. Determine o que os usuários (e funções) precisam fazer e crie políticas que lhes permitam executar apenas essas tarefas." 
     },
     {
-        "pergunta": "",
+        "pergunta": "Você detectou que o seu ambiente na Nuvem, tem picos de acesso. Qual o melhor modelo de instância para responder a esta demanda?4",
         "opcoes":[
-            {"A) ":true},
-            {"B) ":false},
-            {"C) ":false},
-            {"D) ":false}
+            {"A) Sob Demanda":true},
+            {"B) Instâncias Spot":false},
+            {"C) Instância Reservada":false},
+            {"D) Host Dedicado":false}
         ],
-        "resposta": "" 
+        "resposta": "A - Este modelo é propício para picos de utilização." 
+    },
+    {
+        "pergunta": "Qual o modelo de instância, que é mais barato que o modelo sob demanda?",
+        "opcoes":[
+            {"A) Sob Demanda":false},
+            {"B) Host Dedicado":false},
+            {"C) Instâncias Reservadas":false},
+            {"D) Instâncias Spot":true}          
+            
+        ],
+        "resposta": "D - Sim, neste modelo você consegue até 90% em relação ao sob demanda. Essa é outra pergunta que caiu no meu exame." 
+    },
+    {
+        "pergunta": "O que é um security group?",
+        "opcoes":[
+            {"A) Um grupo para adicionar usuarios de segurança.":false},
+            {"B) Um serviço de armazenamento da AWS.":false},
+            {"C) Um serviço de computação na Nuvem da AWS.":false},
+            {"D) Um firewall virtual da AWS.":true}
+        ],
+        "resposta": "D - Sim, o Security Group é um firewall virtual da AWS, utilizado em instâncias EC2." 
+    },
+    {
+        "pergunta": "Quais componentes são necessários para uma carga de trabalho na Nuvem AWS?",
+        "opcoes":[
+            {"A) Computação, Memória, Família e Capacidade de Rede.":false},
+            {"B) Computação, Memória, Armazenamento e Capacidade de Rede":true},
+            {"C) Computação, Memória, Suporte Endereço IPv6 e Capacidade de Rede":false},
+            {"D) Computação, Memória,Rede VPC e Capacidade de Rede":false}
+        ],
+        "resposta": "B - Computação, Memória, Armazenamento e Capacidade de Rede." 
+    },
+    {
+        "pergunta": "Qual serviço da AWS permite você executar códigos sem provisionar ou gerenciar servidores?",
+        "opcoes":[
+            {"A) AWS Elastic Beanstalk":false},
+            {"B) AWS Lightsail":false},
+            {"C) AWS Lambda":true},
+            {"D) AWS EC2":false}
+        ],
+        "resposta": "C - Sim, o <strong>AWS Lambda</strong> permite que você execute código sem provisionar ou gerenciar servidores. Você paga apenas pelo tempo de computação consumido." 
+    },
+    {
+        "pergunta": "Sua empresa vem utilizando a Nuvem AWS por algum tempo, e na última reunião foi decidido criar um blog empresarial do tipo WordPress. Qual destes serviços AWS atende a solicitação o mais rápido possível, com o mínimo de configuração e com baixo custo?",
+        "opcoes":[
+            {"A) Amazon EC2":false},
+            {"B) Amazon Cognito":false},
+            {"C) Amzon Lightsail":true},
+            {"D) AWS Lambda":false}
+        ],
+        "resposta": "C - O <strong>Amazon Lightsail</strong> é uma plataforma de nuvem fácil de usar, que oferece tudo o que você precisa para criar uma plataforma WordPress, além de um plano mensal de baixo custo." 
+    },
+    {
+        "pergunta": "Você é um desenvolvedor de aplicação, que precisa subir uma aplicação na WEB que possua balanceamento de carga, alta disponibilidade (multi az), auto scaling group e seja seguro. Qual plataforma como serviço (PaaS) você deve utilizar?",
+        "opcoes":[
+            {"A) Amazon EC2":true},
+            {"B) AWS Elastic Beanstalk":true},
+            {"C) AWS Lambda":false},
+            {"D) EC2 On-demand":false}
+        ],
+        "resposta": "B - Sim, o <strong>AWS Elastic Beanstalk</strong> é um serviço gerenciado e voltado para desenvolvedores que precisam subir uma aplicação na WEB, sem se preocupar com a infraestrutura." 
+    },
+    {
+        "pergunta": "Quais são as capacidades disponíveis no AWS ASG (Auto Scaling Group)?",
+        "opcoes":[
+            {"A) Capacidade mínima":false},
+            {"B) Capacidade Desejada":false},
+            {"C) Capacidade Máxima":false},
+            {"D) Todas as Anteriores":true}
+        ],
+        "resposta": "D - Todas as Anteriores" 
+    },
+    {
+        "pergunta": "Qual a durabilidade do Amazon S3?",
+        "opcoes":[
+            {"A) 99,9%":false},
+            {"B) 99,99%":false},
+            {"C) 99.999999999%":true},
+            {"D) 99%":false}
+        ],
+        "resposta": "C - O Amazon Simple Storage Service (Amazon S3) é um serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados, segurança e performance líderes do setor. Isso significa que clientes de todos os tamanhos e setores podem usá-lo para armazenar e proteger qualquer volume de dados em vários casos de uso, como data lakes, sites, aplicações para dispositivos móveis, backup e restauração, arquivamento, aplicações empresariais, dispositivos IoT e análises de big data. O Amazon S3 fornece recursos de gerenciamento fáceis de usar, de maneira que você possa organizar os dados e configurar os controles de acesso refinados para atender a requisitos específicos comerciais, organizacionais e de conformidade. O Amazon S3 foi projetado para <strong> 99,999999999% (11 noves)</strong> de durabilidade e armazena dados de milhões de aplicações para empresas em todo o mundo." 
+    },
+    {
+        "pergunta": "O técnico da sua empresa após criar um volume Amazon EBS, não conseguiu anexar na instância EC2 porque o volume desapareceu. <br><strong>Qual é o motivo?</strong>",
+        "opcoes":[
+            {"A) O volume EBS foi criado em umazona de disponibilidade diferente da instância.":true},
+            {"B) O volume EBS não foi criado.":false},
+            {"C) A opção visualizar itens ocultos está marcada.":false},
+            {"D) Dependendo do tamanho do volume EBS, ele não aparece para seleção":false}
+        ],
+        "resposta": "A - Lembre-se de sempre criar o volume <strong>Amazon EBS</strong>, na mesma zona de disponibilidade da sua instância." 
+    },
+    {
+        "pergunta": "Você precisa migrar dados na escala de petabytes para a Nuvem. Qual destes serviços você utilizará?",
+        "opcoes":[
+            {"A) Amazon S3":false},
+            {"B) Amazon Snowball":true},
+            {"C) Amazon EBS":false},
+            {"D) Bucket S3":false}
+        ],
+        "resposta": "B - O <strong>AWS Snowball</strong> é um dispositivo de computação, migração de dados e armazenamento de borda na escala de petabytes." 
+    },
+    {
+        "pergunta": "Um objeto foi adicionado em um bucket S3 e a URL foi compartilhada com um cliente por e-mail. Porém, o cliente informou que ao tentar acessar o arquivo é apresentado access denied. Qual pode ser o problema?",
+        "opcoes":[
+            {"A) Firewall do cliente está impedindo abrir o objeto no bucket S3":false},
+            {"B) Antivírus do cliente está apresentando falso-positivo no objeto do bucket S3":false},
+            {"C) O Bucket está em privado e o objeto está em privado.":false},
+            {"D) A URL do bucket S3 enviada para o cliente está errada.":false}
+        ],
+        "resposta": "C - Access Denied significa que o bucket está privado e o objeto está em privado. Mude-os para público." 
+    },
+    {
+        "pergunta": "Qual serviço na Nuvem AWS é utilizado para instalação de sistemas operacionais?",
+        "opcoes":[
+            {"A) Amazon EC2":false},
+            {"B) Amazon EBS":true},
+            {"C) Amazon Snowball":false},
+            {"D) Amazon S3":false}
+        ],
+        "resposta": "B - O <strong>Amazon EBS</strong> é comparado a um disco rígido que é conectado em instâncias do Amazon EC2." 
+    },
+    {
+        "pergunta": "Qual o armazenamento da AWS que a sua recuperação NÃO é em milissegundos?",
+        "opcoes":[
+            {"A) Amazon EBS":false},
+            {"B) Amazon S3 Glacier":true},
+            {"C) Bucket S3":false},
+            {"D) AWS Storage Gateway":false}
+        ],
+        "resposta": "B - O <strong>Amazon S3 Glacier</strong> é para armazenamento a longo prazo, e quando solicitado a recuperação de um arquivo ele pode levar até 12 horas para recuperá-lo." 
+    },
+    {
+        "pergunta": "Você gostaria de ter os mesmos dados acessíveis, como um drive NFS (Network File System), em todas as zonas de disponibilidade e em todas as suas instâncias EC2. O que você recomenda?",
+        "opcoes":[
+            {"A) Montar um S3":false},
+            {"B) Montar um EFS":true},
+            {"C) Montar um EBS":false},
+            {"D) Montar uma Instance Store":false}
+        ],
+        "resposta": "B - O <strong>AWS Elastic File System</strong> é um sistema de arquivos NFS que permite compartilhar dados em múltiplas zonas de disponibilidade da mesma região." 
+    },
+    {
+        "pergunta": "Para economizar na fatura AWS, todas as instâncias devem ser desligadas durante a madrugada, porém isto está causando a perda de dados quando elas são novamente ligadas. Por que isto está ocorrendo?",
+        "opcoes":[
+            {"A) Os dados estão sendo salvos no bucket S3":false},
+            {"B) Os dados estão sendo salvos no Amazon Glacier":false},
+            {"C) Os dados estão sendo salvos em uma Instance Store":true},
+            {"D) Os dados estõa sendo salvos em um Elastic Block Store":false}
+        ],
+        "resposta": "C - <strong>O Instance Store</strong> é um armazenamento efêmero (do Inglês, ephemeral storage), que não pode ser desconectado e que quando a instância é desligada, todos os dados são perdidos." 
+    },
+    {
+        "pergunta": "Quais são os armazenamentos disponíveis no AWS Storage Gateway?",
+        "opcoes":[
+            {"A) File Gateway":false},
+            {"B) Tape Gateway":false},
+            {"C) Volume Gateway":false},
+            {"D) Todas as alternativas":true}
+        ],
+        "resposta": "D - Todas as alternativas" 
     }
+
  ]
