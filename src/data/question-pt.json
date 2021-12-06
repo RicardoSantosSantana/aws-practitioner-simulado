@@ -423,7 +423,7 @@
      {
          "pergunta": "O técnico da sua empresa após criar um volume Amazon EBS, não conseguiu anexar na instância EC2 porque o volume desapareceu. <br><strong>Qual é o motivo?</strong>",
          "opcoes":[
-             {"A) O volume EBS foi criado em umazona de disponibilidade diferente da instância.":true},
+             {"A) O volume EBS foi criado em uma zona de disponibilidade diferente da instância.":true},
              {"B) O volume EBS não foi criado.":false},
              {"C) A opção visualizar itens ocultos está marcada.":false},
              {"D) Dependendo do tamanho do volume EBS, ele não aparece para seleção":false}

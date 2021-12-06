@@ -37,13 +37,13 @@ export default function Questions(props){
 
     }
    
-   
+    const textToHTML = str => <span dangerouslySetInnerHTML={{__html: str}}/> 
  
     return (<>
          
         <div className="card  mb-2" id={chave}>
             <div className="card-header">
-                <h5 className="card-title">#{id} - {pergunta}</h5>                   
+                <h5 className="card-title">#{id} - {textToHTML(pergunta)}</h5>                   
             </div>
             <div className="card-body">                    
                 <ItensAnswer data={props.data}  answer={answered}  className="list-group-item list-group-item-action"></ItensAnswer> 
