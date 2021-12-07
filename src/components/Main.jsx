@@ -6,7 +6,7 @@ export function Nav({children}){
             <nav className="navbar  navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div className="container-fluid">
                     <div className="navbar-brand">
-                        <h4>Simulado AWS Practitioner</h4>
+                        <h4>Estudo AWS Practitioner</h4>
                         </div>
                     {children}                    
                 </div> 
