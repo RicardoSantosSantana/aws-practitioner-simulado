@@ -1,0 +1,153 @@
+[
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Quais são os planos de suporte disponíveis na AWS?",
+    "resposta":[
+        "A AWS possui quatro (04) planos de suporte: Básico, Desenvolvedor, Negócios e Empresarial. Em sua prova de certificação eles estarão como Basic, Developer, Business e Enterprise."
+    ]
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Qual o nível de suporte de arquitetura é fornecido pelo AWS Support?",
+    "resposta":[
+        "O nível de suporte de arquitetura fornecido varia conforme o nível de suporte. Níveis de serviço mais elevados oferecem suporte progressivo para o caso de uso e especificações do aplicativo do cliente.",
+        "<strong>Básico: </strong>free tier<br/> Acesso gratuito à central de recursos, ao painel de status dos serviços, às perguntas frequentes sobre produtos, aos fóruns de discussão e ao suporte a verificações de integridade.",
+        "<strong>Desenvolvedor:</strong> componentes básicos <br/>Orientação sobre como usar todos os produtos, recursos e serviços da AWS juntos. Inclui orientação sobre as melhores práticas e instrução arquitetônica generalizada.",
+        "<strong>Business:</strong> orientação de casos de uso <br/> Orientação sobre quais produtos, recursos e serviços da AWS usar para melhor oferecer suporte aos casos de uso específicos. Inclui orientação quanto à otimização de produtos da AWS e à configuração para atender a suas necessidades específicas.",
+        "<strong>Enterprise:</strong> arquitetura do aplicativo <br/>  Parceria consultiva oferecendo suporte a casos de uso e aplicativos específicos. Inclui análises de projeto e orientações de arquitetura. A equipe de suporte ao cliente do nível Empresarial inclui um gerente técnico da conta (TAM) designado e acesso a um arquiteto de soluções da AWS."
+    ]    
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Quantos usuários podem abrir casos de suporte técnico?",
+    "resposta":[
+        "<strong>Básico:</strong> Não podem abrir casos de suporte técnico.",
+        "<strong>Desenvolvedor: </strong>Permite que um (01) usuário abra casos de suporte técnico",
+        "<strong>Business e Enterprise: </strong>Permitem que um número ilimitado de usuários abra casos de suporte técnico (com o suporte do AWS Identity and Access Management (IAM))."
+    ]    
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Qual é o tempo de resposta (SLA) do suporte?",
+    "resposta":[        
+        {
+            "text":"O tempo de resposta varia conforme o plano de suporte escolhido:", 
+            "image":"tempo-resposta-sla.png"
+        }
+        
+    ]    
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Como faço para entrar em contato?",
+    "resposta":[
+        "Se você tiver um plano de suporte pago, pode abrir um caso de suporte on-line na <a href='https://console.aws.amazon.com/support/home?#/'>Central de suporte.</a> Se você tiver o suporte no nível Business ou Empresarial, poderá solicitar que a AWS entre em contato com você em qualquer telefone ou iniciar uma conversa via chat com um dos nossos engenheiros.",
+        "E dependendo do seu nível de suporte, o chat também fica disponível, além do telefone e e-mail."        
+    ]    
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Quais os idiomas do AWS Support?",
+    "resposta":[
+        "O AWS Support por enquanto está disponível nos idiomas Inglês e em Japonês."        
+    ]    
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Quais softwares de terceiros têm suporte?",
+    "resposta":[
+        "Os níveis Business e Enterprise do AWS Support incluem suporte limitado para sistemas operacionais e componentes de pilhas de aplicativos comuns. Os engenheiros do AWS Support podem auxiliar na instalação, configuração e resolução de problemas dos softwares de terceiros incluídos na lista de compatibilidade."        
+    ]
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"O que é o suporte para verificações de saúde?",
+    "resposta":[
+        "O suporte a verificações de integridade monitora algumas verificações de status exibidas no console do Amazon EC2. Quando uma dessas verificações falha, todos os clientes têm a opção de abrir um caso de suporte técnico de alta severidade.",
+        "O suporte a verificações de integridade abrange determinadas verificações do Amazon Elastic Compute Cloud (Amazon EC2) e do Amazon Elastic Block Store (Amazon EBS)."
+    ]
+   },
+   {
+    "categoria":"Planos de Suporte",
+    "pergunta":"Como posso obter suporte, caso uma instância do EC2 falhe na verificação de status do sistema?",
+    "resposta":[        
+        "Se uma verificação de status do sistema do EC2 falhar por mais de 20 minutos, será exibido um botão que permite que qualquer cliente da AWS abra um caso. A maioria dos detalhes sobre o seu caso é preenchida automaticamente, como o nome da instância, a região e as informações do cliente, mas você pode incluir contexto adicional redigindo uma descrição de texto livre.",
+        { 
+          "text":"Observação: o suporte para verificações de integridade abrange apenas verificações de status do sistema do EC2 e não a verificação de status da instância do EC2.",
+          "image":"suporte-ec2.png"
+        } 
+        
+    ]
+   },
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Quando o nível gratuito da AWS expirará?",
+    "resposta":[
+        "Duração de 12 meses. Porém, quando o nível gratuito expirar OU se o uso do aplicativo ultrapassar os níveis do nível gratuito, você simplesmente pagará as taxas de serviço padrão conforme o uso."
+    ]
+   },   
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"O que é o nível gratuito da AWS?",
+    "resposta":[
+        "O nível gratuito da AWS oferece aos clientes a capacidade de explorar e testar gratuitamente serviços da AWS até os limites especificados para cada serviço."
+    ]
+   },   
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Se nos cadastrarmos para o faturamento consolidado, poderemos obter o nível gratuito da AWS para cada conta?",
+    "resposta":[
+        "Não, os clientes que usam o faturamento consolidado para consolidar o pagamento de várias contas terão acesso a apenas um nível gratuito por organização."
+    ]
+   },   
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Se eu não esgotar todo o uso do nível gratuito mensal, ele será acumulado para o próximo mês?",
+    "resposta":[
+        "Não, o nível gratuito da AWS é aplicado apenas ao uso mensal. O nível gratuito expira no primeiro dia de cada mês e não é acumulado."
+    ]
+   },  
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Se eu exceder o limite do nível gratuito em um determinado mês, quanto terei que pagar?",
+    "resposta":[
+        "Se a sua utilização ultrapassar os limites mensais do nível gratuito, você pagará as taxas de serviço da AWS padrão conforme o uso."
+    ]
+   },
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Como eu sei quanto utilizei e se excedi os níveis de uso gratuito?",
+    "resposta":[
+        "Você pode ver a atividade de uso atual e passada por serviço e região entrando na sua conta e indo para o painel de gerenciamento de faturamento e custos."
+    ]
+   },
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Estou qualificado para o nível de uso gratuito, mas recebi uma cobrança. Por quê?",
+    "resposta":[
+        "O nível gratuito se aplica a determinados serviços da AWS e até um valor máximo específico de uso mensal. Quando uma conta excede o limite do nível gratuito, as taxas de serviço da AWS padrão são faturadas no seu cartão de crédito."
+    ]
+   },
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Posso usar o nível gratuito da AWS em qualquer região?",
+    "resposta":[
+        "Sim."
+    ]
+   },
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Um cliente da AWS tem acesso a 750 horas de instância em cada instância t2.micro Linux e Windows proporcionadas pelo nível gratuito da AWS?",
+    "resposta":[
+        "Sim. Um cliente com acesso ao nível gratuito da AWS pode usar até 750 horas de instância de cada instância t2.micro executando Linux e Windows. A utilização das instâncias t2.micro do Linux e do Windows é contada independentemente."
+    ]
+   },   
+   {
+    "categoria":"Nível Gratuito",
+    "pergunta":"Quais são as três ofertas gratuitas na AWS ?",
+    "resposta":[
+        "São as do tipo sempre gratuitas, as de 12 meses gratuitos e as de testes por um curto prazo."
+    ]
+   }
+
+]
