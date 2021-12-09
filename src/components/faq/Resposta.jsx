@@ -1,9 +1,12 @@
 import classFaq from "../../model/classFaq.ts";
+import Image from 'next/image'
+
 
 export default function Resposta( { categoria, pergunta } = props ){
  
     const pergfaq = new classFaq();
-    const textToHTML = str => <span  className="text-justify" dangerouslySetInnerHTML={{__html: str}}/> 
+    const textToHTML = str => <span  className="text-justify" dangerouslySetInnerHTML={{__html: str}}></span>
+    
     const retorno = pergfaq.filtrarCategoriaPergunta(categoria,pergunta).map(resp=>{
         
         return resp.resposta.map((el,index)=>{
@@ -12,7 +15,7 @@ export default function Resposta( { categoria, pergunta } = props ){
                 return (             
                  <div  key={el.text+"_"+index} className="text-justify"> 
                  <p>{ textToHTML(el.text) }</p>
-                 <p> <img src={pathImage}></img></p>
+                 <div className="container"> <Image height="100%" width="100%" className="img-fluid"  src={pathImage} alt={el.text}></Image></div>
                  </div> 
                  )                 
                 

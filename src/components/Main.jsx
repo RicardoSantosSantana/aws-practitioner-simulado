@@ -1,7 +1,7 @@
-import { route } from "next/dist/server/router"
 import Header from "./Header"
+import Link from 'next/link'
 
-export function Nav({children}){
+export function Nav({children}=props){
     return (<>
         <div className="container ">
             <nav className="navbar  navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -22,7 +22,9 @@ export function Results( { errors, successes, length } = props ){
 
     return (
             <div className="d-flex  border border border-0  ">
-                <div className="p-2 bg-warning text-dark rounded"> <a href="/faq">FAQ</a></div>      
+                <div className="p-2 bg-warning text-dark rounded"> 
+                <Link href="/perguntasFrequentes"><a>FAQ</a></Link>
+                </div>      
                 <div className="p-2 bg-transparent text-light">Total - <strong>{length}</strong></div>
                 <div className="p-2 bg-transparent text-light ">Acertos - <strong>{successes}</strong></div>                
                 <div className="p-2 bg-transparent text-light">Erros - <strong>{errors}</strong> </div>   
@@ -34,7 +36,7 @@ export function MenuFaq(){
 
     return (
             <div className="d-flex  border border border-1 rounded ">
-                <div className="p-2 bg-transparent text-light"> <a href="/">Voltar - Questionários</a></div>                     
+                <div className="p-2 bg-transparent text-light"> <Link href="/"><a>Voltar - Questionários</a></Link></div>                     
             </div>     
         )    
 }

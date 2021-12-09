@@ -4,28 +4,18 @@ import React, { useContext } from  "react"
 import { Nav, Results } from "../components/Main";
 import  Perguntas  from '../model/perguntas.ts';
 
-export function getServerSideProps(){
 
+export default function Home() {
     const pergunta = new Perguntas();
     pergunta.quantidadePerguntas = pergunta.totQuestion;
-    
-       
-    return {
-        props: { 
-            data: pergunta.perguntasRamdomizadas
-        }
-    }
-}
+    const data = pergunta.perguntasRamdomizadas;
 
-
-export default function Home(props) {
-   
     const { acertos, erros } = useContext(ContextSimulacao); 
     return (        
            <div className="container">  
             
-                <Nav><Results errors={erros} successes={acertos} length = {props.data.length} /></Nav>                                                                 
-                <Simulado data={props.data}></Simulado>
+                <Nav><Results errors={erros} successes={acertos} length = {data.length} /></Nav>                                                                 
+                <Simulado data={data}></Simulado>
                  
             </div>        
         
