@@ -15,7 +15,7 @@ export default function Resposta( { categoria, pergunta } = props ){
                 return (             
                  <div  key={el.text+"_"+index} className="text-justify"> 
                  <p>{ textToHTML(el.text) }</p>
-                 <div className="container"> <Image height="100%" width="100%" className="img-fluid"  src={pathImage} alt={el.text}></Image></div>
+                 <div className="container"> <Image width={1920}   height={1080}   src={pathImage} alt={el.text}></Image></div>
                  </div> 
                  )                 
                 
