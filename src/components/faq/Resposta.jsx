@@ -1,5 +1,6 @@
 import classFaq from "../../model/classFaq.ts";
 import Image from 'next/image'
+import { Typography } from "@mui/material";
 
 
 export default function Resposta( { categoria, pergunta } = props ){
@@ -13,15 +14,20 @@ export default function Resposta( { categoria, pergunta } = props ){
             if(el.text){
                 const pathImage = `/images/${el.image}`
                 return (             
-                 <div  key={el.text+"_"+index} className="text-justify"> 
-                 <p>{ textToHTML(el.text) }</p>
-                 <div className="container"> <Image width={1920}   height={1080}   src={pathImage} alt={el.text}></Image></div>
-                 </div> 
-                 )                 
-                
+                    <Typography key={el+"_"+index}>
+                        { textToHTML(el.text) }
+                         <Image width={1920}   height={1080}   src={pathImage} alt={el.text}></Image>
+                 </Typography>      
+                 )
             }
             else{
-                return  <div  key={el+"_"+index}  className="text-justify mb-2"> { textToHTML(el) }</div>
+                return (
+                    <Typography key={el+"_"+index}>
+                            { textToHTML(el) }
+                    </Typography>      
+                )
+                
+                
             }
         })
         

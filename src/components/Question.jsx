@@ -1,57 +1,22 @@
-import ItensAnswer from "./ItensAnswer"
-import Answer from "./Answer"
-import React, { useContext, useState } from "react";
-
-import { ContextSimulacao } from "../context";
-
+import ItensResposta from './ItensResposta';
+import React, { useState } from "react";
+import { Typography } from "@mui/material";
+import Container from '@mui/material/Container';
+import BarraDivisor from "./BarraDivisor";
 export default function Questions(props){
- 
-  const { acertos,setAcertos, erros, setErros } = useContext(ContextSimulacao);
- 
+  
     const { pergunta , id} = props.data   
-    const chave = `${id}_radio`;   
-    const [ answered, setAnswered ] = useState();
-    const btnAnswer =()=> {
-        if(!answered) return  <button onClick={verifyAnswer} className="btn btn-primary">Confirmar Resposta</button>
-    }
-
-    function verifyAnswer(e){     
-        
-        const rbs = document.querySelectorAll(`input[name="${chave}"]`);     
-     
-        for (const rb of rbs) {
-                if(rb.checked) {                    
-                    
-                    if(rb.getAttribute('right_answer')=="true"){
-                        setAcertos(acertos +1)                
-                        setAnswered({ "right_answer":true,"id":rb.getAttribute('id') });
-                        break;
-                    } else {                  
-                        setErros(erros +1)      
-                        setAnswered({ "right_answer":false,"id":rb.getAttribute('id') });
-                        break;
-                    }
-                }              
-        }
-        e.stopPropagation();
-
-    }
-   
+      
     const textToHTML = str => <span dangerouslySetInnerHTML={{__html: str}}/> 
  
-    return (<>
-         
-        <div className="card  mb-2" id={chave}>
-            <div className="card-header">
-                <h5 className="card-title">#{id} - {textToHTML(pergunta)}</h5>                   
-            </div>
-            <div className="card-body">                    
-                <ItensAnswer data={props.data}  answer={answered}  className="list-group-item list-group-item-action"></ItensAnswer> 
-                <Answer data={props.data} answer={answered}  ></Answer>              
-                {btnAnswer()}                
-            </div>
-      
-        </div>
-        </>
+    return (
+      <Container key={"itensp_"+id} >         
+         <Typography variant="h6" sx={{m:2}}>
+               {id} - {textToHTML(pergunta)}
+         </Typography>
+                            
+        <ItensResposta key={"itenTP_"+id}  idresposta = {id} data={props.data.opcoes}></ItensResposta>
+        <BarraDivisor/>
+      </Container>
     )
 }

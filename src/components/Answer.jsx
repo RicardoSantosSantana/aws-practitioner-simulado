@@ -1,4 +1,5 @@
-import withRouter from "next/dist/client/with-router";
+import RespostaCerta from '../components/RespostaCerta'
+import RespostaErrada from '../components/RespostaErrada'
 
  export default function Answer( props ){
     const textToHTML = str => <span dangerouslySetInnerHTML={{__html: str}}/> 
@@ -8,26 +9,10 @@ import withRouter from "next/dist/client/with-router";
   
     if(!answer) return ""
      
-    const success = (
-            <div className="card text-light bg-success mb-3" >
-                <div className="card-header">PARABÉNS</div>
-                    <div className="card-body">
-                        <h5 className="card-title">Resposta Correta</h5>
-                        <p className="card-text">{textToHTML(resposta)}</p>           
-                    </div>
-            </div>  
+    const success = <RespostaCerta resposta = {textToHTML(resposta)} />
+    const fail = <RespostaErrada resposta = {textToHTML(resposta)} />                
+            
+    return ( answer.right_answer ? success : fail        
     )
-    
-    const fail = (
-        <div className="card text-dark bg-warning mb-3">
-            <div className="card-header">NÃO FOI DESSA VEZ</div>
-                <div className="card-body">
-                    <h5 className="card-title">Resposta Correta</h5>
-                    <p className="card-text">{textToHTML(resposta)}</p>           
-                </div>
-        </div>  
-    )
-  
-    return answer.right_answer ? success : fail  
     
 }

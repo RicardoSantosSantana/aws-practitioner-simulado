@@ -26,18 +26,18 @@ export default class Perguntas{
     }
     
     get perguntasRamdomizadas():any{  
-        this.filtro()                      
+      // this.filtro()                      
         this.adcionarID();
         return this._dados;
     }
-
+    
     filtro(){
         this._dados = this._dados.filter((el,index)=>index<this._quantidade_perguntas).sort(() => Math.random() - 0.5);;
     }
     
     adcionarID(){
         const addID = (prev,atual,idx)=>{
-            prev.push( { 'id':idx+1000, ...atual } ) 
+            prev.push( { 'id':idx+1, ...atual } ) 
             return prev
        }
 

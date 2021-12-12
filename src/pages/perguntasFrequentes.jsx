@@ -1,20 +1,20 @@
  
 import Content from "../components/faq/Content";
 
-import { MenuFaq, Nav } from "../components/Main";
+import Header from "../components/Header"
+import Container from '@mui/material/Container';
+import TopMenu from '../components/TopMenu'
 
 export default function perguntasFrequentes(){
 
 
     return (
-        <div className="container">  
-            <Nav>
-               <MenuFaq/>
-            </Nav>
-               <Content key="conyteny">
-                  
-               </Content>
-        </div>  
+        <Container >
+ 
+            <TopMenu />
+            <Header showResumo="false"></Header>  
+            <Content key="content" />               
+        </Container>  
 
     )
 }

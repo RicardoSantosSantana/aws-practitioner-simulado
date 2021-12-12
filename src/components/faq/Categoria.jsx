@@ -1,36 +1,31 @@
 import classFaq from "../../model/classFaq.ts";
 import Pergunta from "./Pergunta";
+import AccordionFaq from "../faq/AccordionFaq"
+
 
 export default function Categoria(){
-
+ 
  const pergfaq = new classFaq();
 
 const conteudo = ()=>{
   
   return  pergfaq.categorias.map((nomeCategoria,index)=>{
-    
-    const dataBSTarget = "#categoria_ariaControls_" + index 
-    const ariaControls = "categoria_ariaControls_" + index 
-    const ariaLabelledby=  "categoria_fariaLabelledby_" + index 
-    const dataBSparent = "categoria_"+index;
-  
+ 
+    const panelName = "categoria_"+index;
+    const totalPerguntas = pergfaq.filtrarCategoria(nomeCategoria).length;
+ 
+
       return (
-        <div className="accordion accordion-flush" id={dataBSparent} key={dataBSparent}>
-        <div className="accordion-item ">
-        <h2 className="accordion-header" id={ariaLabelledby} >
-          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={dataBSTarget} aria-expanded="false" aria-controls={ariaControls}>
-            {nomeCategoria}
-          </button>
-        </h2>
-        <Pergunta ariaControls={ariaControls} chave={"pergunta_"+dataBSparent} dataBSparent={dataBSparent} ariaLabelledby={ariaLabelledby} categoria={nomeCategoria}></Pergunta> 
-      </div>                           
-      </div>    
+        <AccordionFaq key={panelName} totalPerguntas = { totalPerguntas } title={nomeCategoria} name={panelName}>          
+              <Pergunta key={panelName+"0"} categoria={nomeCategoria}></Pergunta> 
+        </AccordionFaq>
+ 
+          
       )
   })
 }
   
+ return  conteudo()
  
- 
-  return conteudo()
 
 }
