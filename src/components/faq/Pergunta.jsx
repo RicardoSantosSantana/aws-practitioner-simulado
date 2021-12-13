@@ -6,6 +6,8 @@ import Divider from '@mui/material/Divider';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
+import AppsIcon from '@mui/icons-material/Apps';
+import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
 export default function Pergunta( { chave, categoria } = props ){
   
   const pergfaq = new classFaq();
@@ -21,16 +23,12 @@ export default function Pergunta( { chave, categoria } = props ){
  const retorno =()=> {
       return pergfaq.filtrarCategoria(categoria).map((el,index)=>{
         return ( 
-              <Root key={ "resposta_"+ chave+index }>
-                <Typography variant="h5" component="strong" >            
-                  {el.pergunta}
-                  
-                </Typography> 
-                <Resposta   categoria={categoria} pergunta={el.pergunta}></Resposta>
-                <Divider><ArrowLeftOutlinedIcon/><ArrowRightOutlinedIcon/></Divider>
-              <br/>              
-              </Root>           
-                
+              <Root  key={ "resposta_"+ chave+index } sx={{border:1,borderColor:'#dcdcdc',p:0,m:0,mb:1 }}>
+                <Typography  sx={{backgroundColor:'#dcdcdc',color:'black',fontSize:23,p:1,m:0,pl:2 }}   >            
+                {index+1} - {el.pergunta}                  
+                </Typography>    
+                <Resposta categoria={categoria} pergunta={el.pergunta}></Resposta>      
+              </Root>
         )}
       )}   
  

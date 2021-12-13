@@ -148,6 +148,799 @@
     "resposta":[
         "São as do tipo sempre gratuitas, as de 12 meses gratuitos e as de testes por um curto prazo."
     ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"O que é o Amazon Simple Notification Service (Amazon SNS)?",
+    "resposta":[
+        "O Amazon Simple Notification Service (Amazon SNS) é um web service que facilita a configuração, a operação e o envio de notificações da Nuvem."
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Quais são alguns usos de exemplo das notificações do Amazon SNS?",
+    "resposta":[
+        "O serviço do Amazon SNS oferece suporte a uma ampla variedade de necessidades, incluindo notificação de eventos, aplicativos de monitoramento, sistemas de fluxo de trabalho, atualizações de informações urgentes, aplicativos móveis e qualquer outro aplicativo que gere ou consuma notificações.",
+        "Por exemplo, o Amazon SNS pode ser usado em sistemas de fluxo de trabalho para vincular eventos entre aplicativos, mover dados entre datastores ou atualizar registros em sistemas de negócios.",
+        "Um padrão comum é usar o Amazon SNS para publicar mensagens nas filas de mensagens do Amazon SQS, a fim de enviar mensagens de forma confiável e assíncrona para um ou mais componentes do sistema."
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Como o Amazon SNS funciona?",
+    "resposta":[
+        "Primeiro os <strong>desenvolvedores</strong> criam um <strong>''tópico''</strong> que é um ''ponto de acesso'' – identificando um assunto específico ou um tipo de evento – para a publicação de mensagens e a permissão de clientes para se inscrever nas notificações.",
+        "Depois do tópico criado, seu <strong>proprietário</strong> define políticas, como a limitação de quem pode publicar mensagens, se inscrever, ou até especificar quais protocolos de notificação serão utilizados (como o uso do, HTTP/HTTPS, e-mail).",
+        "Os <strong>assinantes</strong> são os clientes interessados em receber as notificações de tópicos. Eles podem se inscrever em um tópico ou serem inscritos pelo proprietário do tópico. Os assinantes especificam o protocolo e o endpoint (URL, endereço de e-mail etc.) para receberem as notificações.",
+        "Quando os <strong>editores</strong> tiverem informações ou atualizações para notificar seus assinantes, eles publicam uma mensagem para o tópico – que acionará imediatamente o <strong>Amazon SNS</strong> para entregar a mensagem a todos os assinantes aplicáveis"
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Qual a diferença do Amazon SNS, do Amazon SQS?",
+    "resposta":[
+        "O <strong>Amazon SNS</strong> permite que aplicativos enviem mensagens para vários assinantes através de um mecanismo de 'push'. Já o <strong>Amazon SQS</strong> é um serviço de fila de mensagens usado por aplicativos distribuídos para trocar mensagens através de um modelo de sondagem e pode ser usado para desacoplar componentes de envio e recebimento.",
+        "Um padrão comum é usar o <strong>Amazon SNS</strong> para publicar mensagens nas filas do <strong>Amazon SQS</strong>, a fim de enviar mensagens de forma confiável e assíncrona para um ou mais componentes do sistema."        
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Quanto custa o Amazon SNS?",
+    "resposta":[
+        "Com o <strong>Amazon SNS</strong>, não há taxa mínima e você paga somente por aquilo que usar",
+        "Contudo, consultando o site em <strong>agosto de 2020</strong>, os usuários pagam 0,50 USD por 1 milhão de solicitações do Amazon SNS, 0,06 USD por 100.000 entregas de notificação via HTTP e 2,00 USD por 100.000 entregas de notificação via e-mail.",
+        "Para mensagens SMS, os usuários podem enviar 100 notificações grátis e as cobranças de mensagens subsequentes variam por país de destino.",
+        "O <strong>Amazon SNS </strong>também inclui um nível gratuito, no qual os usuários podem começar a usar o serviço gratuitamente. A cada mês, os clientes do Amazon SNS não pagam encargos pelo primeiro 1 milhão de solicitações do Amazon SNS, pelas 100.000 primeiras notificações via HTTP, pelas 100 primeiras notificações via SMS e pelas 1.000 primeiras notificações via e-mail."
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Qual é o formato de um tópico do Amazon SNS?",
+    "resposta":[
+        "Há um limite de 256 caracteres para os nomes dos tópicos. Caracteres alfanuméricos mais hifens (-) e sublinhados (_) são permitidos. Os nomes de tópicos devem ser exclusivos em uma conta da AWS. Após excluir um tópico, você pode reutilizar o nome do tópico."
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"O que é um Amazon Resource Name (ARN) ?",
+    "resposta":[
+        "Quando um tópico é criado, o <strong>Amazon SNS</strong> atribuirá um <strong>ARN (Amazon Resource Name)</strong> exclusivo para o tópico, que incluirá o nome do serviço (SNS), a região, o ID da AWS do usuário e o nome do tópico. O ARN será retornado como parte da chamada de API para criar o tópico. Sempre que um editor ou assinante precisar desempenhar qualquer ação no tópico, eles deverão consultar o ARN exclusivo do tópico.",
+        "Exemplo de um ARN para o tópico chamado “mytopic”, criado por um usuário com o ID da conta da AWS “123456789012” e hospedado na região Leste dos EUA, ficará como: <strong> arn:aws:sns:us-east-1:1234567890123456:mytopic</strong>"
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Quais são as operações disponíveis do Amazon SNS e quem pode desempenhar essas operações?",
+    "resposta":[
+        "O Amazon SNS fornece um conjunto de APIs simples para habilitar notificações de eventos para <strong>proprietários</strong> de tópicos, <strong>assinantes</strong> e <strong>editores.</strong> Deste modo, e dependendo do seu nível de acesso, você conseguirá executar as seguintes ações no tópico.",
+        "<strong>O proprietário do tópico pode:</<strong>",
+        "CreateTopic – Crie um novo tópico",
+        "DeleteTopic – Exclua um tópico criado anteriormente.",
+        "ListTopics – Lista dos tópicos de propriedade de um determinado usuário (ID da AWS).",
+        "ListSubscriptionsByTopic – Lista dos tópicos de um determinado tópico",
+        "SetTopicAttributes – Defina/modifique atributos de tópicos, incluindo a definição e a modificação de permissões do editor/assinante, transportes compatíveis etc.",
+        "GetTopicAttributes – Obtenha/visualize atributos existentes de um tópico",
+        "AddPermission – Conceda acesso a usuários selecionados para as ações específicas",
+        "RemovePermission – Remova permissões referentes a usuários selecionados para as ações específicas",
+        "<strong>O assinante do tópico pode:</strong>",
+        "Subscribe – Inscreva uma nova assinatura em um determinado tópico, que gerará uma mensagem de confirmação do Amazon SNS",
+        "ConfirmSubscription – Responda a uma mensagem de confirmação de assinatura, confirmando a solicitação de assinatura para receber notificações do tópico assinado",
+        "UnSubscribe – Cancele uma assinatura cadastrada anteriormente",
+        "ListSubscriptions – Liste assinaturas de propriedade de um determinado usuário (ID da AWS)",
+        "<strong>O editor do tópico pode:</strong>",
+        "Publish: Publique uma nova mensagem para o tópico."
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Quais são os diferentes formatos de entrega/transportes para receber notificações?",
+    "resposta":[
+        "Para que os clientes possam ter ampla flexibilidade no mecanismos de entrega, o Amazon SNS oferece suporte a notificações por meio de vários protocolos de transporte, como:",
+        "<strong>“HTTP”, “HTTPS” </strong>– Os assinantes especificam um URL como parte do registro da assinatura; as notificações serão entregues por meio de um HTTP POST para o URL específico.",
+        "<strong>“Email”, “Email-JSON” </strong> – Mensagens são enviadas para endereços cadastrados como e-mail. O Email-JSON envia notificações como um objeto JSON, enquanto o E-mail envia e-mails baseados em texto.",
+        "<strong>“SQS” </strong> – Os usuários podem especificar uma fila SQS padrão como o endpoint. O Amazon SNS enfileirará uma mensagem de notificação para a fila especificada (que os assinantes poderão, em seguida, processar usando APIs do SQS como ReceiveMessage, DeleteMessage etc.).",
+        "<strong>“SMS” </strong> – As mensagens são enviadas para os números de telefone cadastrados como mensagens de texto SMS."
+    ]
+   },   
+   {
+    "categoria":"SNS",
+    "pergunta":"Quem pode criar um tópico?",
+    "resposta":[
+        "Os tópicos podem ser criados somente pelos usuários com IDs de AWS válidos que se inscreveram no Amazon SNS."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"Qual a diferença entre o Amazon SQS e o Amazon SNS?",
+    "resposta":[
+        "O <strong>Amazon SNS</strong> permite que aplicativos enviem mensagens críticas em termos de tempo para vários assinantes através de um mecanismo de “push”, eliminando a necessidade de verificar periodicamente ou “pesquisar” por atualizações.",
+        "O <strong>Amazon SQS</strong> é um serviço de fila de mensagens usado por aplicativos distribuídos para trocar mensagens e pode ser usado para desacoplar componentes de envio e recebimento."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"O Amazon SQS oferece ordenação de mensagens?",
+    "resposta":[
+        "Sim. As filas do tipo FIFO (first-in-first-out) - do Português, primeiro a entrar, primeiro a sair - preservam a ordem exata de envio e recebimento das mensagens."
+    ]
+   },  
+   {
+    "categoria":"SQS",
+    "pergunta":"Qual é o custo do Amazon SQS?",
+    "resposta":[
+        "Você paga apenas pelo que utilizar e não há taxa mínima."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"O que posso fazer com o nível gratuito do Amazon SQS?",
+    "resposta":[
+        "O nível gratuito do Amazon SQS disponibiliza 1 milhão de solicitações por mês sem custo."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"Quem pode executar operações em uma fila de mensagens?",
+    "resposta":[
+        "Apenas um proprietário de conta da AWS (ou uma conta da AWS para a qual o proprietário da conta delegou direitos) pode executar operações em uma fila de mensagens do Amazon SQS."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"Qual é a latência típica do Amazon SQS?",
+    "resposta":[
+        "As latências típicas para solicitações das APIs SendMessage, ReceiveMessage e DeleteMessage estão na casa das dezenas ou poucas centenas de milissegundos."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"Em quais regiões as filas FIFO estão disponíveis?",
+    "resposta":[
+        "As consultas FIFO estão disponíveis em todas as regiões da AWS em que o Amazon SQS é oferecido, exceto Ásia-Pacífico (Osaka-Local)."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"Posso converter a fila padrão atual em uma fila FIFO?",
+    "resposta":[
+        "Não. Você deve selecionar o tipo de fila ao criá-la."
+    ]
+   },   
+   {
+    "categoria":"SQS",
+    "pergunta":"Qual o nível de confiabilidade do armazenamento de dados no Amazon SQS?",
+    "resposta":[
+        "O Amazon SQS armazena todas as filas de mensagens e mensagens em uma única região altamente disponível da AWS, com várias zonas de disponibilidade (AZs) redundantes para que nenhuma falha única de computador, rede ou AZ possa impedir o acesso às mensagens."
+    ]
+   },    
+   {
+    "categoria":"SQS",
+    "pergunta":"O Amazon SQS tem certificação PCI DSS?",
+    "resposta":[
+        "Sim. O Amazon SQS tem certificação PCI DSS de nível 1"
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual ferramenta pode ser usada para visualizar seus custos e uso da AWS nos últimos meses e para ter obter uma previsão de como serão seus custos da AWS no futuro?",
+    "resposta":[
+        "AWS Cost Explorer",
+        "<strong>Explicação</strong>",
+        "O <strong>AWS Cost Explorer</strong> permite que você visualize os gastos passados, atuais e obtenha previsões do seu uso na AWS ao longo do tempo."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual dos seguintes serviços é um serviço de banco de dados AWS? (Escolha dois)",
+    "resposta":[
+        "<strong>Amazon RDS</strong> e <strong>Amazon RedShift</strong> ",
+        "<strong>Explicação</strong>",
+        "Se você errou essa pergunta, o exercício na aula Serviços AWS para escrever em um documento os nomes dos serviços/produtos AWS e suas definições/características, irá lhe ajudar a acertar questões similares deste tipo na sua prova de certificação."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual das opções a seguir é um dos princípios de design relacionados à confiabilidade na nuvem?",
+    "resposta":[
+        "Recuperar-se automaticamente de uma falha",
+        "<strong>Explicação</strong>",
+        "A recuperação automática em caso de falha, é um princípio de design de confiabilidade."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"No modelo de responsabilidade compartilhada da AWS, quem é responsável pela segurança e conformidade?",
+    "resposta":[
+        "A AWS e o cliente compartilham a responsabilidade",
+        "<strong>Explicação</strong>",
+        "A responsabilidade é dos dois."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual serviço da AWS você pode usar para estabelecer uma conexão de rede dedicada entre seus aplicativos locais e recursos da AWS?",
+    "resposta":[
+        "AWS Direct Connect",
+        "<strong>Explicação</strong>",
+        "O AWS Direct Connect é um serviço de nuvem que facilita estabelecer uma conexão de rede dedicada, do seu local de hospedagem, para a AWS. ", 
+        "Com o AWS Direct Connect, você pode estabelecer uma conectividade privada entre a AWS e o seu datacenter, escritório e/ou ambiente de compartilhamento. ",
+        "Em muitos casos, essa conectividade pode reduzir os custos de rede, aumentar a taxa de transferência da largura de banda e oferecer uma experiência de rede mais consistente que as conexões baseadas na Internet."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual das seguintes afirmações são verdadeiras? (escolha dois)",
+    "resposta":[
+        "Instâncias spot são uma escolha econômica se você puder ser flexível sobre quando seus aplicativos são oferecidos e se seus aplicativos podem ser interrompidos.",
+        "O preço por hora para Instâncias Spot varia de acordo com a demanda",
+        "<strong>Explicação</strong>",
+        "As instâncias spot do Amazon EC2 permitem aproveitar a capacidade não utilizada do EC2 na Nuvem AWS. Em comparação com a definição de preço sob demanda, as instâncias spot oferecem descontos de até 90%."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"A calculadora de TCO da AWS ajuda os clientes a fazer uma comparação de TCO (custo total de propriedade) entre a infraestrutura local e a AWS. Quais das opções a seguir contribuem para o custo geral? (escolha dois)",
+    "resposta":[
+        "Custo de rede e Custo de mão de obra de TI",
+        "<strong>Explicação</strong>",
+        "A calculadora TCO permite visualizar uma estimativa de custos do ambiente on-premises, versus o ambiente da Nuvem.",
+        "<strong>NOTA: </strong>Por mais que essa calculadora não esteja mais acessível, os alunos ainda estão sinalizando perguntas sobre ela, neste exame de certificação."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Se você suspeitar que sua conta da AWS está comprometida, o que deve fazer? (escolha dois)",
+    "resposta":[
+        "Excluir todos os usuários IAM potencialmente comprometidos e todos os recursos que você não criou e alterar a senha de todos os outros usuários IAM.",
+        "Responda a todas as notificações que você erigir do AWS Support por meio do AWS Support Center.",
+        "<strong>Explicação</strong>",
+        "A remoção do usuário de um grupo de usuários é suficiente, mas como não existe essa opção nas alternativas, a exclusão do usuário é a escolha correta. Outro ponto a ter atenção é nas notificações recebidas pela equipe de suporte.",
+        "Existem outros meios de mitigar brechas de segurança, mas apagar todos os recursos da AWS ou apagar sua conta root, NÃO são as respostas certas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual é o plano mínimo do AWS Support que fornece um conjunto completo de verificações do AWS Trusted Advisor e acesso 24x7 por telefone, e-mail e bate-papo com engenheiros de suporte em nuvem?",
+    "resposta":[
+        "Business",
+        "<strong>Explicação</strong>",
+        "Haverá perguntas sobre <strong>qual o mínimo</strong>, com relação <strong>ao custo</strong>, na escolha de um serviço, plano ou produto. Fique atento na interpretação dos enunciados."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual dos serviços a seguir pode ser usado para automatizar implantações de software para seus serviços de computação da AWS e seus servidores locais? (escolha dois)",
+    "resposta":[
+        "AWS CodeDeploy e AWS OpsWorks",
+        "<strong>Explicação</strong>",
+        "O AWS CodeDeploy é um serviço totalmente gerenciado de implantação, que automatiza implantações de software. Já o AWS OpsWorks, é um serviço de gerenciamento de configurações que oferece instâncias gerenciadas do Chef e do Puppet.",
+        "<strong>Nota: </strong> Recomendo como exercício, escrever os nomes dos serviços, os produtos e suas características em um documento ou planilha para estudar. Isso irá lhe ajudar a lembrar e acertar questões deste tipo em sua prova."
+    ]
+   },      
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual das opções a seguir, são considerados benefícios financeiros de mudar para a Nuvem AWS? (escolha dois)",
+    "resposta":[
+        "TCO reduzido (custo total de propriedade) e OPEX reduzido (despesas operacionais)",
+        "<strong>Explicação</strong>",
+        "Um dos grandes problemas de CAPEX no ambiente on-premisses, é a falta de elasticidade, fazendo com que você sempre tenha capacidade demais ou insuficiente para atender as demandas do negócio. Pense num varejo, que na época de Natal ou BlackFriday, pode precisar de até 5x a sua capacidade para operar normalmente devido à alta demanda.", 
+        "Talvez não faça sentido adquirir toda a capacidade necessária no pico de uso (com CAPEX), deixando o hardware ocioso durante o resto do ano. ",
+        "Pior ainda, seria dimensionar mal o pico da demanda, e não suportar os alto níveis de acessos, perdendo clientes e vendas no momento de maior oportunidade de faturamento da companhia. ",
+        "Usar a capacidade elástica na Nuvem resolve muito bem esse problema, porque ao deixar de adquirir hardwares no seu ambiente on-premisses, você reduz o seu Custo por Propriedade (TCO) e permite que você transforme o que seria custo fixo em variável."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual serviço da AWS você pode usar para instalar um banco de dados de terceiros?",
+    "resposta":[
+        "Amazon EC2",
+        "<strong>Explicação</strong>",
+        "O Amazon RDS não permite você instalar um banco de dados de terceiros, você precisa escolher uma das engines disponíveis. O Amazon DynamoDB também não permite mudar o tipo do banco de dados. E o Amazon EMR usa um Hadoop Framework."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Você pode projetar seu sistema na nuvem AWS para ser capaz de resistir à falha de um indivíduo ou de vários componentes. Este é um exemplo de qual característica da AWS?",
+    "resposta":[
+        "Alta disponibilidade",
+        "<strong>Explicação</strong>",
+        "Alta disponibilidade é a característica de um ambiente resiliente a falhas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Quais das opções a seguir são princípios de design importantes para a arquitetura em nuvem da AWS? (escolha dois)",
+    "resposta":[
+        "Implementar acoplamento solto.",
+        "Remova pontos no seu ambiente que podem causar falhas",
+        "<strong>Explicação</strong>",
+        "Este princípio faz parte do AWS Well-Architected. Nele você encontrará orientações para ajudar os arquitetos de Nuvem a criar infraestruturas seguras, resilientes, eficientes e de alta performance para aplicações e cargas de trabalho."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual serviço fornece visibilidade da atividade do usuário, registrando as ações realizadas em sua conta?",
+    "resposta":[
+        "Amazon CloudTrail",
+        "<strong>Explicação</strong>",
+        "O AWS CloudTrail é um serviço que possibilita governança, conformidade, auditoria operacional e auditoria de riscos em sua conta da AWS. Com ele você poderá verificar o histórico de eventos da atividade da conta da AWS, inclusive ações executadas por meio do Console de Gerenciamento da AWS, dos AWS SDKs, das ferramentas da linha de comando e de outros Serviços da AWS."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual dos cenários a seguir é um exemplo de escalabilidade vertical? (escolha dois)",
+    "resposta":[
+        "Aumentando a capacidade de uma instância EC2.",
+        "Diminuindo a capacidade de uma instância EC2",
+        "<strong>Explicação</strong>",
+        "Enquanto na escalabilidade vertical você aumenta ou diminui os recursos da instância (CPU, memória e disco rígido), na escalabilidade horizontal você aumenta ou diminui o número (quantidade) de instâncias."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual serviço da AWS você deve usar para ter uma visão geral da utilização de suas instâncias reservadas e cálculos sobre instâncias reservadas recomendadas?",
+    "resposta":[
+        "AWS Cost Explorer",
+        "<strong>Explicação</strong>",
+        "Para visualizar a utilização da instância, os cálculos, previsões de uso e recomendações, utiliza-se o AWS Cost Explorer."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual das opções a seguir é uma maneira da AWS de ajudar as empresas a reduzir seus custos de TI ao hospedar seus recursos na nuvem da AWS?",
+    "resposta":[
+        "A AWS reduz continuamente os preços da computação em nuvem.",
+        "<strong>Explicação</strong>",
+        "A AWS de tempos em tempos reduz os preços dos seus serviços."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual das opções a seguir é usada para gerenciar o faturamento e o pagamento de várias contas da AWS em uma conta mestre?",
+    "resposta":[
+        "Faturamento consolidado",
+        "<strong>Explicação</strong>",
+        "O faturamento consolidado é uma característica para gerenciar o pagamento de múltiplas contas AWS."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Quais das seguintes afirmações relacionadas a Instâncias Spot são verdadeiras? (escolha dois)",
+    "resposta":[
+        "Se a instância spot for interrompida pela Amazon, durante sua primeira hora, você não será tarifado por esse uso.",
+        "Se você estiver utilizando uma instância com o SO Windows e você encerrar a instância, você será tarifado pelas horas completas utilizadas e uma hora inteira pela hora interrompida.",
+        "<strong>Explicação</strong>",
+        "As instâncias spot possuem muitas vantagens, quando comparadas com as instâncias sob demanda, mas é importante que você saiba suas características antes de adquirir esse produto. Por exemplo, elas podem chegar a 90% de desconto se comparadas com uma instância sob-demanda (MEMORIZE isso); Outras características são: - Se a Amazon interromper a sua instância spot, você NÃO será tarifado; - Se você parar ou encerrar a sua instância spot Linux, você será cobrado pelos segundos utilizados - Se você parar ou encerrar a sua instância spot Windows, será cobrado pelas horas inteiras usadas e por uma hora completa da hora parcial interrompida.",
+        "<a href='https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/spot-interruptions.html#billing-for-interrupted-spot-instances'>+INFO: </a>"
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Qual serviço de segurança da AWS avalia os aplicativos para melhorar sua segurança e conformidade?",
+    "resposta":[
+        "AWS Inspector",
+        "<strong>Explicação</strong>",
+        "O Amazon Inspector é um serviço de avaliação de segurança automático que ajuda a melhorar a segurança e a conformidade dos aplicativos implantados na AWS.",
+        "O Amazon Inspector avalia automaticamente aplicativos em busca de exposições, vulnerabilidades ou discrepâncias em relação às melhores práticas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"No modelo de responsabilidade compartilhada, quais são os exemplos de controles compartilhados? (Escolha dois)",
+    "resposta":[
+        "Gerencimento de patches",
+        "Gerenciamento de configurações",
+        "<strong>Explicação</strong>",
+        "Do mesmo modo que os clientes são responsáveis em aplicar o patch de correções em seus aplicativos e gerenciar a configuração do seu ambiente, a AWS também é responsável de fazer o mesmo na sua camada de responsabilidade."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"De acordo com os pilares do AWS Well Architected Framework, qual das opções a seguir é um princípio de design para Excelência Operacional?",
+    "resposta":[
+        "Aprenda com todas as falhas operacionais",
+        "<strong>Explicação</strong>",
+        "Aprender com as falhas, faz parte do pilar de Operação, do AWS Well-Architected."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 1",
+    "pergunta":"Um aplicativo armazena imagens que serão recuperadas com pouca frequência, mas devem estar disponíveis para recuperação imediatamente. Qual é a opção de armazenamento mais econômica que atende a esses requisitos?",
+    "resposta":[
+        "Acesso infrequente padrão Amazon S3",
+        "<strong>Explicação</strong>",
+        "O S3 Standard-IA é indicado para dados acessados com menos frequência, mas que exigem acesso rápido quando necessários."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual característica da AWS permite que uma empresa internacional forneça aplicativos de baixa latência para seus clientes em todo o mundo?",
+    "resposta":[
+        "Alcance global",
+        "<strong>Explicação</strong>",
+        "Se você está procurando por baixa latência, os serviços têm de estarem próximos dos clientes. Assim, a característica Alcance Global é a resposta correta"
+    ]
+   },   
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual dos serviços a seguir fornece acesso sob demanda aos relatórios de segurança e conformidade da AWS?",
+    "resposta":[
+        "AWS Artfact",
+        "<strong>Explicação</strong>",
+        "O AWS Artifact oferece acesso sob demanda, acesso aos relatórios de segurança e conformidade da AWS e a acordos online específicos como HIPPA e SOCs."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual característica da AWS descreve a capacidade de adquirir recursos conforme você precisa deles e liberar recursos quando não precisar mais deles?",
+    "resposta":[
+        "Elasticidade",
+        "<strong>Explicação</strong>",
+        "Assim como um elástico de borracha, que você pode expandir para segurar mais objetos e retrair quando tem poucos objetos, a característica de elasticidade na Nuvem permite você adquirir mais recursos ou liberar estes, quando o seu uso não é mais necessário."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual das seguintes afirmações são verdadeiras? (Escolha dois)",
+    "resposta":[
+        "O serviço Amazon CloudFront permite o armazenamento em cache de conteúdo em Locais de Borda para distribuição rápida aos clientes.",
+        "Existem mais Locais de Borda do que Zonas de Disponibilidade e Mais Zonas de Disponibilidade do que Regiões.",
+        "<strong>Explicação</strong>",
+        "O Amazon CloudFront utiliza Locais de Borda como cache. Além disto, existem mais Locais de Borda do que Zonas de Disponibilidade, e mais Zonas de Disponibilidade do que Regiões.",
+        {
+            "text":"<a href=' https://aws.amazon.com/pt/about-aws/global-infrastructure/?p=ngi&loc=1'><strong>Fonte</strong></a>", 
+            "image":"regioes-zonas.png"
+        }
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual das opções a seguir é um serviço da AWS que atua como Domain Name System (DNS)?",
+    "resposta":[
+        "Amazon Route 53",
+        "<strong>Explicação</strong>",
+        "Resolver DNS, é uma função do Amazon Route 53."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Quais das seguintes afirmações são verdadeiras (escolha duas)",
+    "resposta":[
+        "O Plano de Suporte da AWS Enterprise inclui gerenciamento de eventos de infraestrutura sem taxa adicional.",
+        "O Plano de Suporte Business da AWS inclui gerenciamento de eventos de infraestrutura mediante uma taxa adicional.",
+        "<strong>Explicação</strong>",
+        "Entender as diferentes características de cada plano de suporte da AWS, é fundamental para acertar perguntas deste tipo."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"No modelo de responsabilidade compartilhada da AWS, qual das opções a seguir é responsabilidade da AWS?",
+    "resposta":[
+        "Segurança fisica da infraestrutura",
+        "<strong>Explicação</strong>",
+        "Das alternativas disponíveis, é responsabilidade da AWS a segurança física (controle de acesso) em seus data centers.",
+        "<a href='https://aws.amazon.com/pt/compliance/shared-responsibility-model/'>Veja mais aqui</a>"
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual das opções a seguir ajuda a proteger o acesso a uma conta da AWS?",
+    "resposta":[
+        "Utilizar a autenticação de duas etapas (MFA).",
+        "<strong>Explicação</strong>",
+        "A AWS dá muita atenção na segurança no acesso dos seus serviços, e o uso da autenticação de duas etapas (MFA), é uma camada de segurança extra no seu ambiente."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual serviço da AWS fornece gerenciamento centralizado e faturamento consolidado para todas as suas contas da AWS?",
+    "resposta":[
+        "AWS Organizations",
+        "<strong>Explicação</strong>",
+        "O AWS Organizations ajuda a gerenciar e a centralizar o seu faturamento em uma única conta. Além disto, o AWS Organizations facilita o controle de acesso, o gerenciamento de conformidade, melhora a segurança do ambiente e auxilia no compartilhando de recursos entre outras contas AWS."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Você precisa implementar uma fila de mensagens gerenciado em trânsito, entre os servidores de aplicativos. Qual serviço você deve usar?",
+    "resposta":[
+        "Amazon SQS",
+        "<strong>Explicação</strong>",
+        "O Amazon Simple Queue Service (SQS) é um serviço de filas de mensagens gerenciado que permite o desacoplamento e a escalabilidade de microsserviços, sistemas distribuídos e aplicativos sem servidor."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Quais dos serviços a seguir possuem recurso de mitigação de ataques DDoS de negação de serviços distribuída?",
+    "resposta":[
+        "AWS Shield",
+        "<strong>Explicação</strong>",
+        "O AWS Shield oferece de detecção e mitigações em linha automáticas e sempre ativas, que minimizam o tempo de inatividade e a latência dos aplicativos, fornecendo proteção contra DDoS, sem necessidade de envolver o AWS Support. O AWS Shield tem dois níveis, Standard e Advanced."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Quais são as vantagens da computação em nuvem? (escolha duas)",
+    "resposta":[
+        "Mudar de despesas CAPEX, para despesas variáveis.",
+        "Beneficiar-se da economia em escala.",
+        "<strong>Explicação</strong>",
+        "O CAPEX (ou capital expenditure), refere-se às despesas ou investimentos em bens de capital (ativos). Por exemplo, quando uma empresa compra um servidor físico para instalar no data center próprio, isso é tratado como CAPEX.",
+        "Já OPEX (ou operational expenditure), refere-se às despesas operacionais.",
+        "Por exemplo, quando uma empresa utiliza Cloud Computing, pagando por hora de utilização de um serviço em nuvem, isso é tratado como OPEX.",
+        "No caso de CAPEX, as despesas são utilizadas para comprar bens físicos, como um hardware. E no caso de OPEX, paga-se pelo uso do serviço e não pela propriedade do bem.",
+        "A Computação em Nuvem é vantajosa em relação ao ambiente on-premises, porque nela, você paga apenas pelo que utilizar, beneficiando-se da economia em escala, transformando custos fixos em custos variáveis e substituindo CAPEX por OPEX."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual calculadora da AWS pode ser usada pelo usuário para estimar a economia de custos ao utilizar a nuvem da AWS, em relação ao ambiente local / tradicional?",
+    "resposta":[
+        "Calculadora de TCO",
+        "<strong>Explicação</strong>",
+        "A calculadora TCO permite visualizar uma estimativa de custos do ambiente on-premises, versus o ambiente da Nuvem.",
+        "<strong>NOTA:</strong> Por mais que essa calculadora não esteja mais acessível, os alunos ainda estão sinalizando perguntas sobre ela, neste exame de certificação."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Quais das seguintes opções estão incluídas no plano de suporte Enterprise da AWS? (escolha dois)",
+    "resposta":[
+        "Um Gerente Técnico de Conta  (TAM) designado.",
+        "Revisões Well-Architected e análises de operações.",
+        "<strong>Explicação</strong>",
+        "Entender as diferentes características do plano de suporte da AWS, é fundamental para acertar perguntas deste tipo no seu exame."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual das opções a seguir é o modelo de precificação do Amazon EC2 que oferece o maior desconto?",
+    "resposta":[
+        "Reservar e pagar tudo antecipadamente, por um período de 3 anos.",
+        "<strong>Explicação</strong>",
+        "Você obtém o melhor desconto se reservar as instâncias por um período de 3 anos e escolher pagar por tudo adiantado."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual dos seguintes serviços da AWS pode ser usado para armazenar e arquivar dados por 5 anos com o menor custo?",
+    "resposta":[
+        "Amazon S3 Glacier",
+        "<strong>Explicação</strong>",
+        "O Amazon S3 Glacier e o S3 Glacier Deep Archive são classes de armazenamento seguro, resiliente e de custo extremamente baixo para arquivamento de dados e backups de longa duração. Para se ter uma ideia de custo, os clientes podem armazenar dados por apenas 1 USD por terabyte por mês, o que representa uma economia significativa, em comparação a soluções locais."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual serviço permite que você expanda e diminua automaticamente seu aplicativo em resposta à demanda?",
+    "resposta":[
+        "Amazon EC2 Auto Scaling",
+        "<strong>Explicação</strong>",
+        "O Auto Scaling do Amazon EC2 ajuda a manter a disponibilidade das aplicações e permite adicionar ou remover automaticamente instâncias do EC2 de acordo com as condições definidas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Em comparação com data centers tradicionais, a nuvem AWS tem:",
+    "resposta":[
+        "Custos variáveis mais baixos e custo iniciais mais baixos.",
+        "<strong>Explicação</strong>",
+        "AWS oferece baixo custo variável, já que possui o modelo <strong>pay-as-you-go</strong> (pague o que usar), permitindo utilizar os serviços da Nuvem sem precisar pagar adiantado ou assinar algum termo de compromisso de uso."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Onde você pode encontrar a listagens de software de fornecedores independentes, que tornam mais fácil encontrar, testar, comprar e implantar software executado na AWS?",
+    "resposta":[
+        "AWS Marketplace",
+        "<strong>Explicação</strong>",
+        "O AWS Marketplace é um local dentro da Nuvem AWS que permite com que você adquira instâncias com softwares do mercado pré-configurados para uso."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Qual serviço da AWS permite codificar sua infraestrutura e tratá-la apenas como código?",
+    "resposta":[
+        "AWS CloudFormation",
+        "<strong>Explicação</strong>",
+        "O AWS CloudFormation permite usar linguagens de programação ou um arquivo de texto simples para modelar e provisionar de forma automática e segura todos os recursos necessários para os aplicativos em todas as regiões e contas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Como você pode ativar a autenticação multifator (MFA) para uma conta da AWS por meio de uma interface baseada no navegador?",
+    "resposta":[
+        "Usando o serviço IAM por meio do Console de Gerenciamento AWS",
+        "<strong>Explicação</strong>",
+        "Para habilitar a MFA, utilize o IAM através do Console de Gerenciamento AWS"
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"No modelo de responsabilidade compartilhada da AWS, qual das opções a seguir é responsabilidade do cliente?",
+    "resposta":[
+        "Políticas AWS IAM",
+        "<strong>Explicação</strong>",
+        "As políticas do IAM (senhas, usuários) é responsabilidade do cliente definir."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Conter outros grupos",
+    "resposta":[
+        "O que um grupo do IAM NÃO pode fazer?",
+        "<strong>Explicação</strong>",
+        "Haverá perguntas negativas em seu exame. Fique atento ao <strong>NÃO</strong> que poderá estar em maiúsculo ou minúsculo no enunciado."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado - Parte 2",
+    "pergunta":"Quais das seguintes opções são vantagens de mudar para a nuvem AWS (escolha duas)",
+    "resposta":[
+        "Tempo de disponibilidade no mercado reduzido.",
+        "Não há necessidade de advinhar os requisitos de capacidade.",
+        "<strong>Explicação</strong>",
+        "Não precisar ficar adivinhando a capacidade das cargas de trabalho e o tempo reduzido na disponibilização no mercado, são as vantagens de ir para a Nuvem."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual é a credencial de acesso que os desenvolvedores podem utilizar para obter acesso programático em uma API da AWS, AWS CLI, SDK, e outras ferramentas de desenvolvimento?",
+    "resposta":[
+        "Chaves de Acesso (Access Keys)",
+        "<strong>Explicação</strong>",
+        "As <strong>chaves de acesso (access keys)</strong> são credenciais de longo prazo para um usuário do IAM ou um Usuário raiz da Conta AWS. Você pode usar chaves de acesso para assinar solicitações programáticas na AWS CLI ou na API da AWS (diretamente ou usando o SDK da AWS).",
+        "As <strong>chaves de acesso</strong> consistem em duas partes: um <strong>ID de chave de acesso</strong> (por exemplo, AKIAIOSFODNN7EXAMPLE) e uma <strong>chave de acesso secreta</strong> (por exemplo, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY).",
+        "Como um nome de usuário e uma senha, você deve usar o ID da chave de acesso e a chave de acesso secreta em conjunto para autenticar suas solicitações. Gerencie suas chaves de acesso de forma tão segura quanto você gerencia seu nome de usuário e sua senha.",
+        "<a target='__blank' href='https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html'>Fonte</a>"
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual serviço da AWS pode ser usado para monitorar, reter as ações e atividade da conta, como chamadas API, na sua infraestrutura da AWS?",
+    "resposta":[
+        "AWS CloudTrail",
+        "<strong>Explicação</strong>",
+        "O AWS CloudTrail é um serviço que possibilita governança, conformidade, auditoria operacional e auditoria de riscos em sua conta da AWS. Com o CloudTrail, é possível registrar, monitorar continuamente e reter a atividade da conta relacionada às ações executadas na infraestrutura da AWS."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual serviço da AWS pode ser usado para hospedar um site estático?",
+    "resposta":[
+        "Amazon S3",
+        "<strong>Explicação</strong>",
+        "O Amazon S3 permite fazer o host de sites estáticos."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual dos seguintes serviços oferece escalonamento automático para tornar seus aplicativos tolerantes a falhas?",
+    "resposta":[
+        "Grupo de Auto Scaling",
+        "<strong>Explicação</strong>",
+        "Com o Auto Scaling você pode definir como o seu ambiente irá responder a falhas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual das seguintes opções descreve a arquitetura de nuvem híbrida na AWS?",
+    "resposta":[
+        "Alguns recursos disponiveis na AWS e outros disponíveis na infraestrutura local.",
+        "<strong>Explicação</strong>",
+        "Em um ambiente híbrido haverá uma parte dos recursos no ambiente local (on-premises) e uma outra parte dos recursos sendo executados na Nuvem."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual dos serviços a seguir permite que você avalie, audite e avalie as configurações de seus recursos da AWS?",
+    "resposta":[
+        "AWS Config",
+        "<strong>Explicação</strong>",
+        "O AWS Config é um serviço que permite acessar, auditar e avaliar as configurações dos recursos da AWS. O Config monitora e grava continuamente registros das configurações de recursos da AWS e lhe permite automatizar a avaliação das configurações registradas com base nas configurações desejadas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Você deseja ser notificado quando o custo de uso da AWS exceder (ou houver previsão de que excederá) um valor específico em dólares. Qual dos seguintes serviços da AWS oferece esse recurso?",
+    "resposta":[
+        "Orçamentos da AWS",
+        "<strong>Explicação</strong>",
+        "O Orçamentos AWS permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem o valor orçado."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Uma empresa deseja migrar para a AWS, um aplicativo que atuará como ininterrupto por um período de 3 anos. Qual das opções a seguir é o modelo de precificação EC2 que oferece a solução mais econômica?",
+    "resposta":[
+        "Instâncias reservadas",
+        "<strong>Explicação</strong>",
+        "Se no enunciado definiu um período (1 ou 3 anos), procure por instâncias reservadas nas alternativas."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual das opções a seguir é uma prática recomendada de arquitetura?",
+    "resposta":[
+        "Distribuir em várias zonas de disponibilidade",
+        "<strong>Explicação</strong>",
+        "Se você distribuir os seus recursos em múltiplas zonas de disponibilidade e uma das suas instâncias falhar, você poderá fazer com que a sua aplicação utilize a instância que está na outra zona de disponibilidade e não ter downtime (tempo de inatividade)."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Quais das seguintes são medidas de segurança recomendadas ao criar acesso a uma conta da AWS? (escolha dois)",
+    "resposta":[
+        "Conceda acesso com o menor privilégio necessário.",
+        "Habilitar MFA",
+        "<strong>Explicação</strong>",
+        "Definir o mínimo privilégio para o usuário e habilitar o MFA na conta, refletirá na segurança do seu ambiente na Nuvem."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual plano de suporte da AWS oferece um tempo de resposta de menos de 1 hora para paralisações do sistema de produção e menos de 15 minutos para paralisações críticas do sistema de negócios?",
+    "resposta":[
+        "Enterprise",
+        "<strong>Explicação</strong>",
+        "O único plano de suporte que oferece uma resposta em menos de 15 minutos para ambientes críticos, é o plano Enterprise."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual das opções a seguir é um serviço de transferência de dados da AWS usado para migrar e transportar conjuntos de dados em escala de exabyte para dentro e fora da AWS?",
+    "resposta":[
+        "AWS Snowmobile",
+        "<strong>Explicação</strong>",
+        "Para transportar exabyte, deve-se solicitar o AWS Snowmobile (caminhão)."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Uma empresa tem um aplicativo que deve estar disponível globalmente o tempo todo. Qual dos seguintes mecanismos de implantação ele deve usar?",
+    "resposta":[
+        "Implantação em várias regiões.",
+        "<strong>Explicação</strong>",
+        "A implementação em múltiplas regiões, permitirá com que a aplicação fique disponível globalmente, mesmo que uma região fique fora por um período de tempo."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Uma empresa está procurando ajuda para construir uma infraestrutura de aplicativo segura e de alto desempenho usando as práticas recomendadas de arquitetura da AWS mais recentes. Qual das opções a seguir pode fornecer orientação gratuitamente?",
+    "resposta":[
+        "Use uma ferramenta AWS Well-Architected",
+        "<strong>Explicação</strong>",
+        "O AWS Well-Architected ajuda arquitetos de nuvem a criar infraestruturas seguras, resilientes, eficientes e de alta performance para aplicações e cargas de trabalho.",
+        "Baseado em cinco pilares (excelência operacional, segurança, confiabilidade, eficiência de performance e otimização de custos), ele fornece uma abordagem consistente para que clientes e parceiros avaliem arquiteturas e implementem designs que podem se expandir com o tempo."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"No modelo de responsabilidade compartilhada da AWS, qual das opções a seguir NÃO é um controle compartilhado?",
+    "resposta":[
+        "Proteção física e segurança da infraestrutura",
+        "<strong>Explicação</strong>",
+        "A proteção física da infraestrutura AWS, é uma responsabilidade exclusiva da AWS."
+    ]
+   },       
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual código HTTP indica o upload bem-sucedido de um objeto para o Amazon S3?",
+    "resposta":[
+        "<strong>200</strong>",
+        "<strong>Explicação</strong>",
+        "Perguntas técnicas são pouco prováveis de aparecerem nesta prova, porém, ",
+        "<strong>Lembre-se:</strong> se enviar um objeto para um bucket S3, e precisar confirmar se o envio ocorreu com sucesso, a resposta no cabeçalho é 200."
+    ]
+   },    
+   {
+    "categoria":"Perguntas de Simulado  - Parte 3",
+    "pergunta":"Qual das opções a seguir indica como funciona o preço do AWS Lambda?",
+    "resposta":[
+        "Os clientes são cobrados com base no número de solicitações de funções Lambda e na duração da execução do código.",
+        "<strong>Explicação</strong>",
+        "Com o AWS Lambda você é cobrado pelo número de solicitações de suas funções e pela duração, o tempo que leva para que seu código seja executado."
+    ]
    }
 
 ]
