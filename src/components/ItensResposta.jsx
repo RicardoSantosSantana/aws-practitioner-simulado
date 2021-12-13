@@ -59,16 +59,21 @@ export default function ItensResposta( { data, idresposta } = props ) {
 
     const item_pergunta = Object.keys(el)[0];
     const valor = Object.values(el)[0];  
- 
+
+  
+      const textToHTML = str => <span  className="text-justify" dangerouslySetInnerHTML={{__html: str}}></span>
+    // implementation
+   
     if(valor=="true"){
         return <FormControlLabel key={"frmcontrol_"+index} value="true"   control={<Radio />} label={item_pergunta} />
     }
     else{
-      return <FormControlLabel key={"frmcontrol_"+index} value={item_pergunta}   control={<Radio />} label={item_pergunta} />
+      return <FormControlLabel key={"frmcontrol_"+index} value={item_pergunta}  control={<Radio />} label={item_pergunta} />
     }
       
   }) 
 
+ 
   return (
     <Container>
         <FormControl key= {"itensREspostdda_"+idresposta} disabled={radioDisabled} sx={{ width:'100%' }} component="fieldset" >     
@@ -78,7 +83,7 @@ export default function ItensResposta( { data, idresposta } = props ) {
             {options}            
           </RadioGroup>
         </FormControl>     
-        {mostrarResposta==''? <Button  className="MuiLink-button"  variant="contained" component="span" 
+        {mostrarResposta==''? <Button  className="MuiLink-button" sx={{mt:2}}  variant="contained" component="span" 
         onClick={btnConfirmar} > Confirmar</Button>:'' }
     </Container>
   );

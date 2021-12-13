@@ -7,7 +7,7 @@
          {"C) As instâncias do Amazon EC2 podem ser executadas sob demanda quando necessário.":true},
          {"D) Os usuários podem executar instâncias suficientes permanentemente para lidar com picos de workload.":false}
      ],
-     "resposta": "C – A capacidade de executar instâncias <strong>sob demanda</strong> quando necessário permite que os usuários executem e encerrem instâncias em resposta a uma workload variável. Essa é uma prática mais econômica do que comprar servidores on-premises suficientes para lidar com o pico de carga."
+     "resposta": "C – A capacidade de executar instâncias sob demanda  quando necessário permite que os usuários executem e encerrem instâncias em resposta a uma workload variável. Essa é uma prática mais econômica do que comprar servidores on-premises suficientes para lidar com o pico de carga."
      },
               
      {
@@ -18,7 +18,7 @@
              {"C) Amazon EC2":false},
              {"D) Amazon AppStream 2.0":false}
          ],
-         "resposta": "B – O <strong>AWS DMS</strong> ajuda os usuários a migrar bancos de dados para a AWS de forma rápida e segura. O banco de dados de origem permanece totalmente operacional durante a migração, minimizando períodos de inatividade para aplicações que dependem dele. O AWS DMS pode migrar os dados de e para os bancos de dados comerciais e de código aberto mais usados"
+         "resposta": "B – O AWS DMS  ajuda os usuários a migrar bancos de dados para a AWS de forma rápida e segura. O banco de dados de origem permanece totalmente operacional durante a migração, minimizando períodos de inatividade para aplicações que dependem dele. O AWS DMS pode migrar os dados de e para os bancos de dados comerciais e de código aberto mais usados"
      },
      {
          "pergunta": "Qual oferta da AWS permite que os usuários encontrem, comprem e comecem imediatamente a usar soluções de software no ambiente da AWS?",
@@ -78,7 +78,7 @@
              {"C) AWS X-Ray":false},
              {"D) AWS Identity and Access Management (AWS IAM)":false}
          ],
-          "resposta": "B – O <strong>AWS CloudTrail</strong> ajuda os usuários a habilitar governança, conformidade e auditoria operacional e de risco de suas contas da AWS. As ações realizadas por um usuário, uma função ou um serviço da AWS são registradas como eventos no CloudTrail. Os eventos incluem ações realizadas no Console de Gerenciamento da AWS, na Interface da Linha de Comando (CLI) da AWS e nos SDKs e nas APIs da AWS." 
+          "resposta": "B – O AWS CloudTrail  ajuda os usuários a habilitar governança, conformidade e auditoria operacional e de risco de suas contas da AWS. As ações realizadas por um usuário, uma função ou um serviço da AWS são registradas como eventos no CloudTrail. Os eventos incluem ações realizadas no Console de Gerenciamento da AWS, na Interface da Linha de Comando (CLI) da AWS e nos SDKs e nas APIs da AWS." 
      },
      {
          "pergunta": "Qual serviço seria usado para enviar alertas com base nos alarmes do Amazon CloudWatch?",
@@ -88,7 +88,7 @@
              {"C) AWS Trusted Advisor":false},
              {"D) Amazon Route 53":false}
          ],
-         "resposta": "A – <strong>O Amazon SNS</strong> e o <strong>Amazon CloudWatch</strong> são integrados para que os usuários possam coletar, visualizar e analisar métricas para cada SNS ativo. Depois que os usuários configuram o CloudWatch para o Amazon SNS, eles podem obter um insight melhor sobre a performance dos tópicos, notificações por push e entregas por SMS do <strong>Amazon SNS.</strong>"
+         "resposta": "A – O Amazon SNS  e o Amazon CloudWatch  são integrados para que os usuários possam coletar, visualizar e analisar métricas para cada SNS ativo. Depois que os usuários configuram o CloudWatch para o Amazon SNS, eles podem obter um insight melhor sobre a performance dos tópicos, notificações por push e entregas por SMS do Amazon SNS.  "
      },    
      {
          "pergunta": "Onde um usuário pode encontrar informações sobre ações proibidas na infraestrutura da AWS?",
@@ -98,7 +98,7 @@
              {"C) Console de Faturamento da AWS":false},
              {"D) Política de uso aceitável da AWS":true}
          ],
-         "resposta": "D – <strong>A política de uso aceitável da AWS</strong> fornece informações sobre ações proibidas na infraestrutura da AWS. " 
+         "resposta": "D – A política de uso aceitável da AWS  fornece informações sobre ações proibidas na infraestrutura da AWS. " 
      },
      {
          "pergunta": "Seu estagiário pergunta sobre o que é computação na Nuvem. Qual a melhor resposta que você pode dar para ele?",
@@ -114,8 +114,8 @@
          "pergunta": "Em uma reunião com a diretoria da sua empresa para apresentar o projeto de ir para a Nuvem, o gerente financeiro levanta a mão e pergunta sobre qual será a vantagem financeira. Qual o melhor argumento para responder questionamentos assim?",
          "opcoes":[
              {"A) Teremos uma redução de curso ao longo do tempo, diminuindo o Capex e aumentando o nosso Opex":true},
-             {"B) Teremos uma redução de custo ao londo do tempo, diminuindo o Opex e aumentnado o Capex":false},
-             {"C) Não teremos uma redução de custo, porque o Capex é maijor que o Opex":false},
+             {"B) Teremos uma redução de custo ao longo do tempo, diminuindo o Opex e aumentando o Capex":false},
+             {"C) Não teremos uma redução de custo, porque o Capex é maior que o Opex":false},
              {"D) Não teremos uma redução de curso, porque o Opex é maior que o Capex":false}
          ],
          "resposta": "A – O Opex é uma despesa operacional e é dedutível no imposto no mesmo ano da sua realização." 
@@ -123,20 +123,20 @@
      {
          "pergunta": "Na prospecção de um novo cliente, você é questionado sobre qual a vantagem de ir para a Nuvem. Qual a melhor argumentação comercial para perguntas assim?",
          "opcoes":[
-             {"A) <strong>Still Guessing: </strong> Ir para a Nuvem é fazer várias tentaticas até encontrar o melhor poder computacional":false},
-             {"B) <strong>Go Global in minutes: </strong> Você não precisa mais esperar a compra de um novo servidor para melhorar seu desempenho. Na Nuvem você escolhe um serviço, configura e já começa a usar.":true},
-             {"C) <strong>Slow Speed:</strong> Ir para a Nuvem é enfrentar latência, mas é um ambiente muito seguro.":false},
-             {"D) <strong>Expensive:</strong> Ir para a Nuvem pode ser caro no começo, mas possui vantagens competitivas.":false}
+             {"A) Still Guessing:   Ir para a Nuvem é fazer várias tentaticas até encontrar o melhor poder computacional":false},
+             {"B) Go Global in minutes:   Você não precisa mais esperar a compra de um novo servidor para melhorar seu desempenho. Na Nuvem você escolhe um serviço, configura e já começa a usar.":true},
+             {"C) Slow Speed:  Ir para a Nuvem é enfrentar latência, mas é um ambiente muito seguro.":false},
+             {"D) Expensive:  Ir para a Nuvem pode ser caro no começo, mas possui vantagens competitivas.":false}
          ],
          "resposta": "B - Enquanto que em um ambiente on-premises você precisa aguardar o hardware chegar na sua empresa, na Nuvem ele está literalmente na distância de alguns cliques." 
      },
      {
          "pergunta": "Qual é o modelo computacional na Nuvem em que serei responsável pelo meu aplicativo, meus dados e o sistema operacional do computador?",
          "opcoes":[
-             {"A) <strong>Tradicional</strong>":false},
-             {"B) <strong>IaaS</strong> Infraestrutura como Serviço ":true},
-             {"C) <strong>SaaS</strong> Software como Serviço":false},
-             {"D) <strong>PaaS</strong> Plataforma como Serviço ":false}
+             {"A) Tradicional  ":false},
+             {"B) IaaS  Infraestrutura como Serviço ":true},
+             {"C) SaaS  Software como Serviço":false},
+             {"D) PaaS  Plataforma como Serviço ":false}
          ],
          "resposta": "B - No IaaS você tem acesso no sistema operacional. Exemplo de IaaS é o Amazon EC2." 
      },
@@ -181,18 +181,18 @@
      {
          "pergunta": "Na Responsabilidade Compartilhada, qual a responsabilidade da AWS e qual a SUA responsabilidade?",
          "opcoes":[
-             {"A) While the AWS manages security <strong>IN</strong> the cloud, you are responsible for security <strong>OF</strong> the cloud.":true},
-             {"B) While the AWS manages security <strong>OF</strong> the cloud, you are responsible for security <strong>IN</strong> the cloud.":true},
-             {"C) While the AWS manages security <strong>OF</strong> the cloud, you are responsible for security <strong>OF</strong> the cloud.":false},
-             {"D) While the AWS manages security <strong>IN</strong> the cloud, you are responsible for security <strong>IN</strong> the cloud.":false}
+             {"A) While the AWS manages security IN  the cloud, you are responsible for security OF  the cloud.":false},
+             {"B) While the AWS manages security OF  the cloud, you are responsible for security IN  the cloud.":true},
+             {"C) While the AWS manages security OF  the cloud, you are responsible for security OF  the cloud.":false},
+             {"D) While the AWS manages security IN  the cloud, you are responsible for security IN  the cloud.":false}
          ],
          "resposta": "B - Essa é uma pergunta clássica de prova! Memorize isso: 'AWS = OF the Cloud e 'Você = IN the Cloud'" 
      },
      {
          "pergunta": "Você está recebendo uma equipe de auditoria na sua empresa e eles querem visitar o seu datacenter. Você explica que agora o seu datacenter está na Nuvem AWS e eles querem ir até lá por questão de compliance, segurança e conformidade. Podemos agendar uma visitar no datacenter da AWS?",
          "opcoes":[
-             {"A) <strong>Sim, </strong>é só agendar uma visita via página da AWS. E os relatórios de conformidade podem ser obtidos no <strong>AWS Artifact.</strong>":false},
-             {"B) <strong>Não, </strong>as visitar são proibidas. Porém a AWS é continuamente auditada e os relatórios de confirmidade podem ser obtidos no <strong>AWS Artifact.</strong>":true}
+             {"A) Sim,   é só agendar uma visita via página da AWS. E os relatórios de conformidade podem ser obtidos no AWS Artifact.  ":false},
+             {"B) Não,   as visitar são proibidas. Porém a AWS é continuamente auditada e os relatórios de confirmidade podem ser obtidos no AWS Artifact.  ":true}
          ],
          "resposta": "B - Correto! Por questões de segurança, as visitas no datacenter da AWS são proibidas. A auditoria de conformidade dos serviços e infraestrutura AWS devem ser realizada com base nos documentos disponíveis no AWS Artifact." 
      },
@@ -204,7 +204,7 @@
              {"C) São ofertas de nível pago.":false},
              {"D) São um conjunto de ofertas de nível gratuíto (que não expiram), de nível gratuito que expiram em 12 meses e de testes de curso prazo.":true}
          ],
-         "resposta": "D - Sim, uma conta <strong>Free Tier</strong> é o conjunto de três tipos de ofertas: Os do tipo sempre gratuitos, os que expiram em 12 meses e os de testes de curto prazo." 
+         "resposta": "D - Sim, uma conta Free Tier  é o conjunto de três tipos de ofertas: Os do tipo sempre gratuitos, os que expiram em 12 meses e os de testes de curto prazo." 
      },
      {
          "pergunta": "O seu gerente operacional deseja ser avisado caso o orçamento da área ultrapasse os gastos na Nuvem. Qual serviço podemos utilizar para atender este pedido?",
@@ -261,7 +261,7 @@
              {"C) Amazon WAF":true},
              {"D) Amazon VPC":false}
          ],
-         "resposta": "C - Sim, o <strong>AWS WAF</strong> é um firewall de aplicativos web." 
+         "resposta": "C - Sim, o AWS WAF  é um firewall de aplicativos web." 
      },
      {
          "pergunta": "Qual serviço podemos utilizar para criar um usuário administrativo no AWS?",
@@ -271,7 +271,7 @@
              {"C) Amazon S3":false},
              {"D) AWS Artifact":false}
          ],
-         "resposta": "A - <strong>IAM</strong> significa: Identity and Access Management." 
+         "resposta": "A - IAM  significa: Identity and Access Management." 
      },
      {
          "pergunta": "A área de desenvolvimento solicitou suporte na federação de login no aplicativo da empresa. Qual serviço da AWS você sugere utilizar?",
@@ -281,7 +281,7 @@
              {"C) Credencial de Acesso Temporário":false},
              {"D) Amazon Cognito":true}
          ],
-         "resposta": "D - Sim, o <strong>Amazon Cognito</strong> é para federação de login. O Amazon Cognito fornece autenticação, autorização e gerenciamento de usuários para suas aplicações Web e móveis. Seus usuários podem fazer login diretamente com um nome de usuário e uma senha ou por meio de terceiros, como o Facebook, a Amazon, o Google ou a Apple." 
+         "resposta": "D - Sim, o Amazon Cognito  é para federação de login. O Amazon Cognito fornece autenticação, autorização e gerenciamento de usuários para suas aplicações Web e móveis. Seus usuários podem fazer login diretamente com um nome de usuário e uma senha ou por meio de terceiros, como o Facebook, a Amazon, o Google ou a Apple." 
      },
      {
          "pergunta": "O site da sua empresa está sofrendo constantes ataques de DDoS. Qual serviço podemos ativar para mitigar estes ataques?",
@@ -291,7 +291,7 @@
              {"C) AWS WAF":false},
              {"D) AWS IAM":false}
          ],
-         "resposta": "Sim, o <strong>AWS Shield</strong> tem como características a proteção contra ataques DDoS. Um ataque Distributed Denial of Service (DDoS – ataques distribuídos de negação de serviço) é um ataque em que vários sistemas comprometidos lançam um flood em um destino, como uma rede de dados ou aplicações web, com tráfego. Um ataque DDoS pode evitar que usuários legítimos acessem um serviço e pode fazer com que o sistema falhe por conta do grande volume de tráfego.<p>A AWS fornece dois níveis de proteção contra ataques DDoS: AWS Shield Standard e AWS Shield Advanced.</p>" 
+         "resposta": "Sim, o AWS Shield  tem como características a proteção contra ataques DDoS. Um ataque Distributed Denial of Service (DDoS – ataques distribuídos de negação de serviço) é um ataque em que vários sistemas comprometidos lançam um flood em um destino, como uma rede de dados ou aplicações web, com tráfego. Um ataque DDoS pode evitar que usuários legítimos acessem um serviço e pode fazer com que o sistema falhe por conta do grande volume de tráfego.<p>A AWS fornece dois níveis de proteção contra ataques DDoS: AWS Shield Standard e AWS Shield Advanced.</p>" 
      },
      { 
          "pergunta": "O desenvolvedor da sua equipe perguntou quais são as linguagens de programação que estão disponíveis para começar a desenvolver no ambiente AWS. E você respondeu:",
@@ -306,12 +306,12 @@
      {
          "pergunta": "Qual serviço da AWS torna mais fácil para você criar e gerenciar chaves e controlar o uso de criptografia em uma ampla gama de serviços da AWS e em seus aplicativos?",
          "opcoes":[
-             {"A) AWS Shield":true},
+             {"A) AWS Shield":false},
              {"B) AWS KMS":true},
              {"C) AWS Secrets Manager":false},
              {"D) AWS WAF":false}
          ],
-         "resposta": "B - O <strong>AWS Key Management Service (AWS KMS)</strong> é um serviço gerenciado que facilita a criação e o controle de chaves de criptografia usadas para criptografar dados. Para proteger e validar suas AWS KMS keys, o AWS KMS usa módulos de segurança de hardware (HSMs) de acordo com o Programa de validação de módulos criptográficos FIPS 140-2, exceto nas regiões China (Pequim) e China (Ningxia). O AWS KMS é integrado à maioria dos serviços da AWS que criptografam seus dados. O AWS KMS também é integrado ao AWS CloudTrail para registrar em log o uso das suas chaves do KMS para necessidades de auditoria, regulamentação e conformidade."
+         "resposta": "B - O AWS Key Management Service (AWS KMS)  é um serviço gerenciado que facilita a criação e o controle de chaves de criptografia usadas para criptografar dados. Para proteger e validar suas AWS KMS keys, o AWS KMS usa módulos de segurança de hardware (HSMs) de acordo com o Programa de validação de módulos criptográficos FIPS 140-2, exceto nas regiões China (Pequim) e China (Ningxia). O AWS KMS é integrado à maioria dos serviços da AWS que criptografam seus dados. O AWS KMS também é integrado ao AWS CloudTrail para registrar em log o uso das suas chaves do KMS para necessidades de auditoria, regulamentação e conformidade."
      },
      {
          "pergunta": "Após criar os acessos no seu ambiente, você criou um grupo, definiu suas permissões e adicionou os usuários. Porém, surgiu uma dúvida: É possível adicionar um grupo dentro deste grupo?",
@@ -358,7 +358,7 @@
              {"C) Um serviço de computação na Nuvem da AWS.":false},
              {"D) Um firewall virtual da AWS.":true}
          ],
-         "resposta": "D - Sim, o <strong>Security Group</strong> é um firewall virtual da AWS, utilizado em instâncias EC2." 
+         "resposta": "D - Sim, o Security Group  é um firewall virtual da AWS, utilizado em instâncias EC2." 
      },
      {
          "pergunta": "Quais componentes são necessários para uma carga de trabalho na Nuvem AWS?",
@@ -378,7 +378,7 @@
              {"C) AWS Lambda":true},
              {"D) AWS EC2":false}
          ],
-         "resposta": "C - Sim, o <strong>AWS Lambda</strong> permite que você execute código sem provisionar ou gerenciar servidores. Você paga apenas pelo tempo de computação consumido." 
+         "resposta": "C - Sim, o AWS Lambda  permite que você execute código sem provisionar ou gerenciar servidores. Você paga apenas pelo tempo de computação consumido." 
      },
      {
          "pergunta": "Sua empresa vem utilizando a Nuvem AWS por algum tempo, e na última reunião foi decidido criar um blog empresarial do tipo WordPress. Qual destes serviços AWS atende a solicitação o mais rápido possível, com o mínimo de configuração e com baixo custo?",
@@ -388,7 +388,7 @@
              {"C) Amazon Lightsail":true},
              {"D) AWS Lambda":false}
          ],
-         "resposta": "C - O <strong>Amazon Lightsail</strong> é uma plataforma de nuvem fácil de usar, que oferece tudo o que você precisa para criar uma plataforma WordPress, além de um plano mensal de baixo custo." 
+         "resposta": "C - O Amazon Lightsail  é uma plataforma de nuvem fácil de usar, que oferece tudo o que você precisa para criar uma plataforma WordPress, além de um plano mensal de baixo custo." 
      },
      {
          "pergunta": "Você é um desenvolvedor de aplicação, que precisa subir uma aplicação na WEB que possua balanceamento de carga, alta disponibilidade (multi az), auto scaling group e seja seguro. Qual plataforma como serviço (PaaS) você deve utilizar?",
@@ -398,7 +398,7 @@
              {"C) AWS Lambda":false},
              {"D) EC2 On-demand":false}
          ],
-         "resposta": "B - Sim, o <strong>AWS Elastic Beanstalk</strong> é um serviço gerenciado e voltado para desenvolvedores que precisam subir uma aplicação na WEB, sem se preocupar com a infraestrutura." 
+         "resposta": "B - Sim, o AWS Elastic Beanstalk  é um serviço gerenciado e voltado para desenvolvedores que precisam subir uma aplicação na WEB, sem se preocupar com a infraestrutura." 
      },
      {
          "pergunta": "Quais são as capacidades disponíveis no AWS ASG (Auto Scaling Group)?",
@@ -418,17 +418,17 @@
              {"C) 99.999999999%":true},
              {"D) 99%":false}
          ],
-         "resposta": "C - O Amazon Simple Storage Service (<strong>Amazon S3</strong>) é um serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados, segurança e performance líderes do setor. Isso significa que clientes de todos os tamanhos e setores podem usá-lo para armazenar e proteger qualquer volume de dados em vários casos de uso, como data lakes, sites, aplicações para dispositivos móveis, backup e restauração, arquivamento, aplicações empresariais, dispositivos IoT e análises de big data. O <strong>Amazon S3</strong> fornece recursos de gerenciamento fáceis de usar, de maneira que você possa organizar os dados e configurar os controles de acesso refinados para atender a requisitos específicos comerciais, organizacionais e de conformidade. O <strong>Amazon S3</strong> foi projetado para <strong> 99,999999999% (11 noves)</strong> de durabilidade e armazena dados de milhões de aplicações para empresas em todo o mundo." 
+         "resposta": "C - O Amazon Simple Storage Service (Amazon S3  ) é um serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados, segurança e performance líderes do setor. Isso significa que clientes de todos os tamanhos e setores podem usá-lo para armazenar e proteger qualquer volume de dados em vários casos de uso, como data lakes, sites, aplicações para dispositivos móveis, backup e restauração, arquivamento, aplicações empresariais, dispositivos IoT e análises de big data. O Amazon S3  fornece recursos de gerenciamento fáceis de usar, de maneira que você possa organizar os dados e configurar os controles de acesso refinados para atender a requisitos específicos comerciais, organizacionais e de conformidade. O Amazon S3  foi projetado para  99,999999999% (11 noves)  de durabilidade e armazena dados de milhões de aplicações para empresas em todo o mundo." 
      },
      {
-         "pergunta": "O técnico da sua empresa após criar um volume Amazon EBS, não conseguiu anexar na instância EC2 porque o volume desapareceu. <br><strong>Qual é o motivo?</strong>",
+         "pergunta": "O técnico da sua empresa após criar um volume Amazon EBS, não conseguiu anexar na instância EC2 porque o volume desapareceu. <br>Qual é o motivo?  ",
          "opcoes":[
              {"A) O volume EBS foi criado em uma zona de disponibilidade diferente da instância.":true},
              {"B) O volume EBS não foi criado.":false},
              {"C) A opção visualizar itens ocultos está marcada.":false},
              {"D) Dependendo do tamanho do volume EBS, ele não aparece para seleção":false}
          ],
-         "resposta": "A - Lembre-se de sempre criar o volume <strong>Amazon EBS</strong>, na mesma zona de disponibilidade da sua instância." 
+         "resposta": "A - Lembre-se de sempre criar o volume Amazon EBS  , na mesma zona de disponibilidade da sua instância." 
      },
      {
          "pergunta": "Você precisa migrar dados na escala de petabytes para a Nuvem. Qual destes serviços você utilizará?",
@@ -438,7 +438,7 @@
              {"C) Amazon EBS":false},
              {"D) Bucket S3":false}
          ],
-         "resposta": "B - O <strong>AWS Snowball</strong> é um dispositivo de computação, migração de dados e armazenamento de borda na escala de petabytes." 
+         "resposta": "B - O AWS Snowball  é um dispositivo de computação, migração de dados e armazenamento de borda na escala de petabytes." 
      },
      {
          "pergunta": "Um objeto foi adicionado em um bucket S3 e a URL foi compartilhada com um cliente por e-mail. Porém, o cliente informou que ao tentar acessar o arquivo é apresentado access denied. Qual pode ser o problema?",
@@ -458,7 +458,7 @@
              {"C) Amazon Snowball":false},
              {"D) Amazon S3":false}
          ],
-         "resposta": "B - O <strong>Amazon EBS</strong> é comparado a um disco rígido que é conectado em instâncias do Amazon EC2." 
+         "resposta": "B - O Amazon EBS  é comparado a um disco rígido que é conectado em instâncias do Amazon EC2." 
      },
      {
          "pergunta": "Qual o armazenamento da AWS que a sua recuperação NÃO é em milissegundos?",
@@ -468,7 +468,7 @@
              {"C) Bucket S3":false},
              {"D) AWS Storage Gateway":false}
          ],
-         "resposta": "B - O <strong>Amazon S3 Glacier</strong> é para armazenamento a longo prazo, e quando solicitado a recuperação de um arquivo ele pode levar até 12 horas para recuperá-lo." 
+         "resposta": "B - O Amazon S3 Glacier  é para armazenamento a longo prazo, e quando solicitado a recuperação de um arquivo ele pode levar até 12 horas para recuperá-lo." 
      },
      {
          "pergunta": "Você gostaria de ter os mesmos dados acessíveis, como um drive NFS (Network File System), em todas as zonas de disponibilidade e em todas as suas instâncias EC2. O que você recomenda?",
@@ -478,7 +478,7 @@
              {"C) Montar um EBS":false},
              {"D) Montar uma Instance Store":false}
          ],
-         "resposta": "B - O <strong>AWS Elastic File System</strong> é um sistema de arquivos NFS que permite compartilhar dados em múltiplas zonas de disponibilidade da mesma região." 
+         "resposta": "B - O AWS Elastic File System  é um sistema de arquivos NFS que permite compartilhar dados em múltiplas zonas de disponibilidade da mesma região." 
      },
      {
          "pergunta": "Para economizar na fatura AWS, todas as instâncias devem ser desligadas durante a madrugada, porém isto está causando a perda de dados quando elas são novamente ligadas. Por que isto está ocorrendo?",
@@ -488,7 +488,7 @@
              {"C) Os dados estão sendo salvos em uma Instance Store":true},
              {"D) Os dados estão sendo salvos em um Elastic Block Store":false}
          ],
-         "resposta": "C - <strong>O Instance Store</strong> é um armazenamento efêmero (do Inglês, ephemeral storage), que não pode ser desconectado e que quando a instância é desligada, todos os dados são perdidos." 
+         "resposta": "C - O Instance Store  é um armazenamento efêmero (do Inglês, ephemeral storage), que não pode ser desconectado e que quando a instância é desligada, todos os dados são perdidos." 
      },
      {
          "pergunta": "Quais são os armazenamentos disponíveis no AWS Storage Gateway?",
@@ -506,7 +506,7 @@
             {"A) Sim, essa é uma característica do Route 53":true},
             {"B) Não, o Route 53 apenas gerencia domínios":false}            
         ],
-        "resposta": "A - Você pode comprar e gerenciar nomes de domínio (como meusite.com) e o <strong>Amazon Route 53</strong> configura automaticamente as definições de DNS para os seus domínios." 
+        "resposta": "A - Você pode comprar e gerenciar nomes de domínio (como meusite.com) e o Amazon Route 53  configura automaticamente as definições de DNS para os seus domínios." 
     },
     {
         "pergunta": "Como o Amazon CloudFront contorna a latência na distribuição de conteúdos (CDN)?",
@@ -516,7 +516,7 @@
             {"C) Ele utiliza as zonas de disponibilidade como cache.":false},
             {"D) Todas as anteriores.":false}
         ],
-        "resposta": "A - Sim, os <strong>ponto de presença</strong> (POP, do inglês Point of Presence) são importantes porque eles atuam como cache." 
+        "resposta": "A - Sim, os ponto de presença  (POP, do inglês Point of Presence) são importantes porque eles atuam como cache." 
     },
     {
         "pergunta": "Qual o serviço da AWS que permite a criação de uma rede isolada logicamente na Nuvem?",
@@ -526,7 +526,7 @@
             {"C) Amazon VPC":true},
             {"D) Elastic Load Balacing":false}
         ],
-        "resposta": "C - A <strong>Amazon Virtual Private Cloud (Amazon VPC) </strong> permite executar os recursos da AWS em uma rede virtual definida por você. Essa rede virtual se assemelha a uma rede tradicional que você operaria no seu datacenter, com os benefícios de usar a infraestrutura dimensionável da AWS." 
+        "resposta": "C - A Amazon Virtual Private Cloud (Amazon VPC)   permite executar os recursos da AWS em uma rede virtual definida por você. Essa rede virtual se assemelha a uma rede tradicional que você operaria no seu datacenter, com os benefícios de usar a infraestrutura dimensionável da AWS." 
     },
     {
         "pergunta": "Quais são os balanceamentos de carga disponíveis?",
@@ -546,7 +546,7 @@
             {"C) Amazon EC2":false},
             {"D) Amazon EBS":false}
         ],
-        "resposta": "O <strong>Amazon RDS</strong> é um banco relacional. Sua sigla em Inglês significa: Relational Database Service" 
+        "resposta": "O Amazon RDS  é um banco relacional. Sua sigla em Inglês significa: Relational Database Service" 
     },
     {
         "pergunta": "Quais são os mecanismos que o Amazon RDS suporta?",
@@ -566,7 +566,7 @@
             {"C) Amazon ElastiChache":true},
             {"D) Amazon DynamoDB":false}
         ],
-        "resposta": "C - Habilitar o <strong>Amazon ElastiCache</strong>, permitirá o armazenamento de dados na memória e a responder as requisições em menos de um (01) milissegundo." 
+        "resposta": "C - Habilitar o Amazon ElastiCache  , permitirá o armazenamento de dados na memória e a responder as requisições em menos de um (01) milissegundo." 
     },
     {
         "pergunta": "Qual destes é um banco de dados com característica NoSQL?",
@@ -576,7 +576,7 @@
             {"C) Amazon DynamoDB":true},
             {"D) Amazon Neptune":false}
         ],
-        "resposta": "C - <strong>Amazon DynamoDB.</strong> Serviço de banco de dados NoSQL, rápido e flexível para performance abaixo de 10 milissegundos em qualquer escala." 
+        "resposta": "C - Amazon DynamoDB.  Serviço de banco de dados NoSQL, rápido e flexível para performance abaixo de 10 milissegundos em qualquer escala." 
     },
     {
         "pergunta": "Em uma reunião técnica foi sugerido utilizar a ferramenta Trusted Advisor para avaliar o ambiente da Nuvem do cliente, porém você lembrou que dependendo do plano de suporte escolhido, nem todos os recursos ficam disponíveis. Quais são os planos de suporte que concedem acesso total no Trusted Advisor?",
@@ -586,7 +586,7 @@
             {"C) Enterprise, Business":true},
             {"D) Business, Basic":false}
         ],
-        "resposta": "C - Os planos 'mais caros', que são o Enterprise e o Business, concedem acesso completo no <strong>Trusted Advisor.</strong>" 
+        "resposta": "C - Os planos 'mais caros', que são o Enterprise e o Business, concedem acesso completo no Trusted Advisor.  " 
     },
     {
         "pergunta": "Quais são os pilares do AWS Well-Architected?",
@@ -606,7 +606,7 @@
             {"C) AWS CloudFormation":false},
             {"D) AWS Trusted Advisor":false}
         ],
-        "resposta": "A - Se na sua prova pedir para medir o desempenho (do Inglês, performance), associe com um cronômetro. E o serviço que realiza essa atividade é o <strong>AWS CloudWatch.</strong>" 
+        "resposta": "A - Se na sua prova pedir para medir o desempenho (do Inglês, performance), associe com um cronômetro. E o serviço que realiza essa atividade é o AWS CloudWatch.  " 
     },
     {
         "pergunta": "Você faz parte de um pequeno grupo de desenvolvedores em uma startup em ascensão. Na última reunião foi definido que a responsabilidade de criar a infraestrutura na Nuvem, passaria a ser uma das suas responsabilidade para acelerar os projetos da empresa. Qual destes serviços facilitará a replicação da infraestrutura do ambiente de testes e produção?",
@@ -616,7 +616,7 @@
             {"C) AWS CloudFormation":true},
             {"D) AWS CloudTrail":false}
         ],
-        "resposta": "C - <strong>CloudFormation</strong> permite modelar, provisionar e gerenciar recursos da AWS e de terceiros ao tratar a infraestrutura como código." 
+        "resposta": "C - CloudFormation  permite modelar, provisionar e gerenciar recursos da AWS e de terceiros ao tratar a infraestrutura como código." 
     },
     {
         "pergunta": "Uma instância computacional foi apagada e você precisa identificar quem foi que fez isso para a próxima reunião. Qual serviço podemos utilizar para auditar o ambiente?",
@@ -626,7 +626,7 @@
             {"C) AWS CloudTrail":true},
             {"D) Amazon CloudFront":false}
         ],
-        "resposta": "C - <strong>AWS CloudTrail</strong> é um serviço AWS que lhe permite administrar, manter-se compatível e realizar auditorias operacionais e de risco na sua conta AWS. As ações realizadas por um usuário, uma função ou um serviço da AWS são registradas como eventos no CloudTrail. Os eventos incluem ações realizadas em AWS Management Console, AWS Command Line Interface, e AWS SDKs e APIs." 
+        "resposta": "C - AWS CloudTrail  é um serviço AWS que lhe permite administrar, manter-se compatível e realizar auditorias operacionais e de risco na sua conta AWS. As ações realizadas por um usuário, uma função ou um serviço da AWS são registradas como eventos no CloudTrail. Os eventos incluem ações realizadas em AWS Management Console, AWS Command Line Interface, e AWS SDKs e APIs." 
     },
     {
         "pergunta": "Quais são os exemplos de inscritos?",
@@ -639,7 +639,7 @@
         "resposta": "C - Lembre que os incritos irão realizar alguma ação de entrega, como colocar a mensagem em uma fila (Amazon SQS), alguma ação no servidor (HTTP/S), enviar um e-mail, um mensagem no celular ou uma função no AWS Lambda." 
     },
     {
-        "pergunta": "No <strong>Amazon SNS</strong>, quais são os dois tipos de clientes?",
+        "pergunta": "No Amazon SNS  , quais são os dois tipos de clientes?",
         "opcoes":[
             {"A) Os editores e ou assinantes (ou incritos).":true},
             {"B) Os controladores e os assinatnes (ou incritos).":false},
@@ -656,7 +656,7 @@
             {"C) Assíncrona, FIFO (First-in, First-out).":false},
             {"D) Síncrona, Assíncrona":false}
         ],
-        "resposta": "A - O <strong>Amazon Simple Queue Service (Amazon SQS)</strong> é um web service que disponibiliza a você acesso a filas de mensagens que armazenam mensagens esperando processamento. Com o <strong>Amazon SQS</strong>, você pode criar rapidamente aplicações de enfileiramento de mensagens executáveis em qualquer computador." 
+        "resposta": "A - O Amazon Simple Queue Service (Amazon SQS)  é um web service que disponibiliza a você acesso a filas de mensagens que armazenam mensagens esperando processamento. Com o Amazon SQS  , você pode criar rapidamente aplicações de enfileiramento de mensagens executáveis em qualquer computador." 
     },
     {
         "pergunta": "Qual o serviço utilizado para envio de mensagens em filas gerenciadas e permite o desacoplamento e a escalabilidade de microsserviços?",
@@ -666,7 +666,7 @@
             {"C) Amazon EC2":false},
             {"D) Amazon SQS":true}
         ],
-        "resposta": "D - O <strong>Amazon SQS</strong> é um serviço de filas de mensagens gerenciado que permite o desacoplamento e a escalabilidade de microsserviços, sistemas distribuídos e aplicativos sem servidor." 
+        "resposta": "D - O Amazon SQS  é um serviço de filas de mensagens gerenciado que permite o desacoplamento e a escalabilidade de microsserviços, sistemas distribuídos e aplicativos sem servidor." 
     },
     {
         "pergunta": "Você deseja que suas mensagens sejam processadas exatamente uma vez e em ordem. O que você precisa utilizar?",
@@ -676,7 +676,7 @@
             {"C) SQS Delay Queue":false},
             {"D) SQL FIFO Queue":true}
         ],
-        "resposta": "D - As <strong>filas FIFO (First-In-First-Out)</strong> são projetadas para aprimorar o envio de mensagens entre aplicativos quando a ordem das operações e eventos é crítica ou quando duplicatas não podem ser toleradas. As filas FIFO também fornecem processamento exatamente uma vez, mas têm um número limitado de transações por segundo (TPS)." 
+        "resposta": "D - As filas FIFO (First-In-First-Out)  são projetadas para aprimorar o envio de mensagens entre aplicativos quando a ordem das operações e eventos é crítica ou quando duplicatas não podem ser toleradas. As filas FIFO também fornecem processamento exatamente uma vez, mas têm um número limitado de transações por segundo (TPS)." 
     },
     {
         "pergunta": "Em um novo projeto da empresa em que você atua, a equipe de desenvolvimento está para colocar no mercado um termostato que ajusta automaticamente a temperatura do ambiente. Para isso, este termostato utilizará Internet das Coisas (IoT) para coletar dados em tempo real, processar essas informações e retornar com os ajustes da melhor temperatura do ambiente sem intervenção de um usuário. Qual serviço da AWS podemos utilizar para atender essa demanda dos desenvolvedores?",
@@ -686,7 +686,7 @@
             {"C) Amazon Kinesis":true},
             {"D) Amazon Athena":false}
         ],
-        "resposta": "C - O <strong>Amazon Kinesis</strong> é um serviço totalmente gerenciado para processamento em tempo real de dados de streaming em altíssima escala. Você pode configurar centenas de milhares de produtores de dados que colocam dados continuamente em um stream do Amazon Kinesis. Por exemplo, dados de clickstreams de websites, logs de aplicações e feeds de mídia social. Em menos de um segundo, os dados estarão disponíveis para suas aplicações do Amazon Kinesis para leitura e processamento a partir do stream." 
+        "resposta": "C - O Amazon Kinesis  é um serviço totalmente gerenciado para processamento em tempo real de dados de streaming em altíssima escala. Você pode configurar centenas de milhares de produtores de dados que colocam dados continuamente em um stream do Amazon Kinesis. Por exemplo, dados de clickstreams de websites, logs de aplicações e feeds de mídia social. Em menos de um segundo, os dados estarão disponíveis para suas aplicações do Amazon Kinesis para leitura e processamento a partir do stream." 
     },
     {
         "pergunta": "Você precisa enviar notificações por e-mail para os seus usuários. Qual serviço podemos utilizar para entregar essa mensagem?",
@@ -695,6 +695,6 @@
             {"B) SNS com pub/sub":true},
             {"C) Amazon Kineses":false}            
         ],
-        "resposta": "B - O <strong>Amazon SNS </strong> utiliza do <strong>paradigma pub/sub</strong> (publisher e subscriber), que significa Editores e Assinantes (ou inscritos). O Editor cria um tópico e os Assinantes se inscrevem (ou assinam) neste tópico para receber notificações." 
+        "resposta": "B - O Amazon SNS   utiliza do paradigma pub/sub  (publisher e subscriber), que significa Editores e Assinantes (ou inscritos). O Editor cria um tópico e os Assinantes se inscrevem (ou assinam) neste tópico para receber notificações." 
     }
   ]

@@ -6,8 +6,9 @@ export default function RespostaErrada( {show,resposta} = props) {
   const resultado =  (
   <>
             <Typography variant="h6" sx={{
-              backgroundColor:'orange',
-              m:2,
+              backgroundColor:'red',
+              mt:2,
+              mb:2,
               p:2,color:'white'
 
             }}> 
