@@ -9,7 +9,7 @@ import '@fontsource/roboto/700.css';
 function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    //import("bootstrap/dist/js/bootstrap");
   }, []);
 
   return (

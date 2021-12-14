@@ -1,10 +1,7 @@
 import questionJson from '../data/question-pt.json'
 
 export default class Perguntas{
-    #pergunta
-    #opcoes
-    #resposta
-    
+
     static totAcertos:any;
     private _dados:any;
 
