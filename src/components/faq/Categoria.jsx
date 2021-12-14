@@ -1,31 +1,25 @@
 import classFaq from "../../model/classFaq.ts";
 import Pergunta from "./Pergunta";
-import AccordionFaq from "../faq/AccordionFaq"
+import Typography from '@mui/material/Typography';
 
-
-export default function Categoria(){
- 
- const pergfaq = new classFaq();
-
-const conteudo = ()=>{
-  
-  return  pergfaq.categorias.map((nomeCategoria,index)=>{
- 
-    const panelName = "categoria_"+index;
-    const totalPerguntas = pergfaq.filtrarCategoria(nomeCategoria).length;
+export default function Categoria({categoria}=props){
  
 
-      return (
-        <AccordionFaq key={panelName} totalPerguntas = { totalPerguntas } title={nomeCategoria} name={panelName}>          
-              <Pergunta key={panelName+"0"} categoria={nomeCategoria}></Pergunta> 
-        </AccordionFaq>
- 
+    const pergfaq = new classFaq();
+    const panelName = "categoria";
+    const totalPerguntas = pergfaq.filtrarCategoria(categoria).length;
+
+    const conteudo = (
+          <>
+          <Typography variant="h5" sx={{mt:2,mb:2}}>
+            {categoria}
+          </Typography>
           
-      )
-  })
-}
-  
- return  conteudo()
+          <Pergunta key={panelName+"0"} categoria={categoria}></Pergunta> 
+        </>
+    )
+   
+ return  categoria!=""?  conteudo : ''
  
 
 }
