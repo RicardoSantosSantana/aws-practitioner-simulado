@@ -8,7 +8,7 @@ export default function Simulado({data}=props){
     });
 
     return (
-        <div className="border p-2  border border-1 rounded">    
+        <div style="border:1px solid red" className="border p-2  border border-1 rounded">    
             {simulado}
         </div>
 

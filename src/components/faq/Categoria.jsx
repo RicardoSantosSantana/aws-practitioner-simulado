@@ -1,6 +1,7 @@
 import classFaq from "../../model/classFaq.ts";
 import Pergunta from "./Pergunta";
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 export default function Categoria({categoria}=props){
  
@@ -11,9 +12,11 @@ export default function Categoria({categoria}=props){
 
     const conteudo = (
           <>
-          <Typography variant="h5" sx={{mt:2,mb:2}}>
-            {categoria}
+          <Divider  flexItem> 
+          <Typography variant="h5" sx={{ color:'#dcdcdc', mt:4,mb:4}}>
+          ~ {categoria} ~ 
           </Typography>
+          </Divider>
           
           <Pergunta key={panelName+"0"} categoria={categoria}></Pergunta> 
         </>

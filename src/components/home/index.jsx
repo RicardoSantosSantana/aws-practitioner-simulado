@@ -16,10 +16,6 @@ export default function Home() {
             <Container >                          
                 <Header></Header>              
                 {simulado}
-            </Container> 
-        
-        )
- 
+            </Container>         
+        ) 
 }
-
-
