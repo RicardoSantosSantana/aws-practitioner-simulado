@@ -5,7 +5,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 import Link from '@mui/material/Link';
  
-export default function ListItems() {
+export default function Items() {
   return (
       <div>
         <ListItem button>
@@ -20,7 +20,7 @@ export default function ListItems() {
             <ListItemIcon>
                 <QuestionAnswerOutlinedIcon />
             </ListItemIcon>
-            <Link   underline="none" href="/perguntasFrequentes" color="inherit">
+            <Link   underline="none" href="/perguntas" color="inherit">
                 <ListItemText primary="Perguntas" />
             </Link>
         </ListItem>     

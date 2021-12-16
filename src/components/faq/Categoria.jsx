@@ -12,7 +12,7 @@ export default function Categoria({categoria}=props){
 
     const conteudo = (
           <>
-          <Divider  flexItem> 
+          <Divider sx={{ color:'black'}} flexItem> 
           <Typography variant="h5" sx={{ color:'#dcdcdc', mt:4,mb:4}}>
           ~ {categoria} ~ 
           </Typography>

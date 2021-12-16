@@ -1,6 +1,8 @@
-import Dashboard from "../components/dashboard/Dashboard";
-import Home from "../components/home"
+import Bar from "../components/nav/Bar"
+import Exercicio from "../components/exercicio"
+import LikeDislike from "../components/exercicio/LikeDislike"
+
 export default function  index(){
-  return <Dashboard show="true"> <Home /> </Dashboard>
+  return <Bar show="true" titleRight={<LikeDislike/> } titleLeft="Exercícios"> <Exercicio /> </Bar>
 }
 

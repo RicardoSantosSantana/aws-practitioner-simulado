@@ -1,4 +1,3 @@
- 
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -6,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import RespostaCerta from './RespostaCerta';
 import RespostaErrada from './RespostaErrada';
-import { ContextSimulacao } from "../context";
+import { ContextSimulacao } from "../../context";
 import React, { useContext, useState, useEffect } from "react";
 import Container from '@mui/material/Container';
 
@@ -76,7 +75,7 @@ export default function ItensResposta( { data, idresposta } = props ) {
  
   return (
     <Container>
-        <FormControl key= {"itensREspostdda_"+idresposta} disabled={radioDisabled} sx={{ width:'100%' }} component="fieldset" >     
+        <FormControl key= {"itens_resposta_"+idresposta} disabled={radioDisabled} sx={{ width:'100%' }} component="fieldset" >     
           <RespostaCerta  resposta ={respostaCorreta().opcao[0]}  show={mostrarResposta}  ></RespostaCerta> 
           <RespostaErrada resposta ={respostaCorreta().opcao[0]}   show = {mostrarResposta}></RespostaErrada>     
           <RadioGroup   disabled={radioDisabled} value={respostaSelecionada} onChange={handleChange}>        
