@@ -5,11 +5,11 @@ import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import RespostaCerta from './RespostaCerta';
 import RespostaErrada from './RespostaErrada';
-import { ContextSimulacao } from "../../context";
+import { ContextSimulacao } from "../../context/Index";
 import React, { useContext, useState, useEffect } from "react";
 import Container from '@mui/material/Container';
 
-export default function ItensResposta( { data, idresposta } = props ) {
+export default function ItensResposta( { theme, data, idresposta } = props ) {
 
   const { acertos,setAcertos, erros, setErros } = useContext(ContextSimulacao);
 
@@ -64,25 +64,26 @@ export default function ItensResposta( { data, idresposta } = props ) {
     // implementation
    
     if(valor=="true"){
-        return <FormControlLabel key={"frmcontrol_"+index} value="true"   control={<Radio />} label={item_pergunta} />
+        return <FormControlLabel  theme={theme} key={"frmcontrol_"+index} value="true"   control={<Radio  theme={theme} />} label={item_pergunta} />
     }
     else{
-      return <FormControlLabel key={"frmcontrol_"+index} value={item_pergunta}  control={<Radio />} label={item_pergunta} />
+      return <FormControlLabel  theme={theme} key={"frmcontrol_"+index} value={item_pergunta}  control={<Radio theme={theme} />} label={item_pergunta} />
     }
       
   }) 
 
  
   return (
-    <Container>
-        <FormControl key= {"itens_resposta_"+idresposta} disabled={radioDisabled} sx={{ width:'100%' }} component="fieldset" >     
+    <Container theme={theme}>
+        <FormControl theme={theme}   sx={{ 
+                   width:'100%'  }} key= {"itens_resposta_"+idresposta} disabled={radioDisabled}  component="fieldset" >     
           <RespostaCerta  resposta ={respostaCorreta().opcao[0]}  show={mostrarResposta}  ></RespostaCerta> 
           <RespostaErrada resposta ={respostaCorreta().opcao[0]}   show = {mostrarResposta}></RespostaErrada>     
-          <RadioGroup   disabled={radioDisabled} value={respostaSelecionada} onChange={handleChange}>        
+          <RadioGroup theme={theme} disabled={radioDisabled} value={respostaSelecionada} onChange={handleChange}>        
             {options}            
           </RadioGroup>
         </FormControl>     
-        {mostrarResposta==''? <Button  className="MuiLink-button" sx={{mt:2}}  variant="contained" component="span" 
+        {mostrarResposta==''? <Button  theme={theme}  className="MuiLink-button" sx={{mt:2}}  variant="contained" component="span" 
         onClick={btnConfirmar} > Confirmar</Button>:'' }
     </Container>
   );

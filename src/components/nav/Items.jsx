@@ -5,26 +5,32 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 import Link from '@mui/material/Link';
  
-export default function Items() {
-  return (
-      <div>
-        <ListItem button>
-            <ListItemIcon>
-                <DashboardIcon />
+export default function Items({theme}) {
+  return (<>
+ 
+        <ListItem theme={ theme}  sx={{ 
+                    bgcolor: 'background.default',
+                    color: 'text.primary' }} button>
+            <ListItemIcon theme={ theme} >
+                <DashboardIcon  theme={ theme}  />
             </ListItemIcon>
-            <Link   underline="none" href="/" color="inherit">
-                <ListItemText primary="Exercício" />
+            <Link theme={ theme}   underline="none" href="/" >
+                <ListItemText theme={ theme}  primary="Exercício" />
             </Link>
         </ListItem>
-        <ListItem button>
-            <ListItemIcon>
-                <QuestionAnswerOutlinedIcon />
+
+        <ListItem theme={ theme}  sx={{ 
+                    bgcolor: 'background.default',
+                    color: 'text.primary' }} button>
+            <ListItemIcon theme={ theme} >
+                <QuestionAnswerOutlinedIcon  theme={ theme}  />
             </ListItemIcon>
-            <Link   underline="none" href="/perguntas" color="inherit">
-                <ListItemText primary="Perguntas" />
+            <Link theme={ theme}   underline="none" href="/perguntas" >
+                <ListItemText theme={ theme}  primary="Perguntas" />
             </Link>
-        </ListItem>     
-      </div>
+        </ListItem>
+        </>
+ 
   )
 
 }
