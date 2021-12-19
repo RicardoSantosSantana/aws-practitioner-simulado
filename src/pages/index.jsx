@@ -1,32 +1,31 @@
 import Bar from "../components/nav/Bar"
 import Exercicio from "../components/exercicio"
 import LikeDislike from "../components/exercicio/LikeDislike"
+import { ContextSimulacao } from "../context/Index";
+import React, { useContext, useEffect } from "react";
 import axios from 'axios';
 
-import { ContextSimulacao } from '../context/Index';
-import { useContext } from "react";
-
-
-
-export default function  Home(){
-
-//header:{"Access-Control-Allow-Origin":"*",  "Access-Control-Allow-Headers":"Origin, X-Requested-With, Content-Type, Accept, Authorization"},        
+Home.getInitialProps = async()=> {
+    const response = await axios.get('https://aws-api-theta.vercel.app/api/exercicio')
+    return {     
+        dados: response.data         
+    }
+} 
+  
+export default function Home( { dados }){ 
+    const {  theme, mode, setMode, dadosJson, setDadosJson } = useContext(ContextSimulacao);
     
-axios({        
-        method: 'get',
-        url: 'https://aws-api-theta.vercel.app/api/exercicio',
-        responseType: 'json'
-      })
-        .then(function (response) {
-          console.log(response)
-        });
+    useEffect(()=>{
+        setDadosJson(dados)
+    })
+ 
 
-    const { theme, mode, setMode } = useContext(ContextSimulacao);
 
  return ( 
         <Bar show="true" theme={ theme }  mode={ mode } setMode = { setMode } titleRight={<LikeDislike theme={ theme }/> } titleLeft="Exercícios"> 
-            <Exercicio  theme={ theme }/> 
-        </Bar> )
+            <Exercicio theme={ theme }/> 
+        </Bar> 
+    )
 
 }
 

@@ -1,14 +1,14 @@
-import classFaq from "../../model/classFaq.ts";
 import Pergunta from "./Pergunta";
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import { faqFunctions } from "../../functions/faq";
 
-export default function Categoria({theme, categoria}=props){
- 
+export default function Categoria( { theme, categoria, dados }=props){
+   
+    const panelName = "categoria";    
+    faqFunctions.dados = dados;
 
-    const pergfaq = new classFaq();
-    const panelName = "categoria";
-    const totalPerguntas = pergfaq.filtrarCategoria(categoria).length;
+    const totalPerguntas = faqFunctions.filtrarCategoria(categoria).length;
 
     const conteudo = (
           <>

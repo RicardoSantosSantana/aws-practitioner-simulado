@@ -1,14 +1,14 @@
 import { createContext,  useState, useMemo, useEffect } from 'react'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
- 
+
 export const ContextSimulacao = createContext({})
  
-
 export const AwsSimulacao = ({ children }) => {
  
     const [acertos,setAcertos] = useState(0)
     const [erros,setErros] = useState(0)
     const [mode, setMode] =  useState('dark');
+    const [ dadosJson , setDadosJson ] = useState()
  
     useEffect(() => { 
       
@@ -24,7 +24,7 @@ export const AwsSimulacao = ({ children }) => {
 
 
     const theme = useMemo( () => createTheme( { palette: { mode, } } ), [mode]);
-    const valor = { acertos, setAcertos, erros, setErros, mode, setMode, theme  }
+    const valor = { acertos, setAcertos, erros, setErros, mode, setMode, theme,dadosJson,setDadosJson  }
 
     return (
         <ContextSimulacao.Provider theme={ theme } value={valor}>

@@ -1,8 +1,25 @@
 module.exports = {
   reactStrictMode: true,
-  images: {
-    domains: ['source.unsplash.com'],
-  },
-  
+  async headers() {
+    return [
+      {
+        source: '/api/faq',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+      {
+        source: '/api/exercicio',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      }
+    ] 
+  }
 }
- 

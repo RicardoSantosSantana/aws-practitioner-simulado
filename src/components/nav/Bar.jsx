@@ -15,8 +15,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import NavBarItens from  './Items'
- 
- 
+  
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -88,8 +88,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function Bar({theme, mode, setMode, children, titleLeft, titleRight}) {
-
-   
+  
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {

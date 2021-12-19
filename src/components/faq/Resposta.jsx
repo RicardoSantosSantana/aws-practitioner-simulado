@@ -1,14 +1,13 @@
-import classFaq from "../../model/classFaq.ts";
 import Image from 'next/image'
 import { Typography } from "@mui/material";
-
+import { faqFunctions } from '../../functions/faq'
 
 export default function Resposta( { categoria, pergunta } = props ){
  
-    const pergfaq = new classFaq();
+    
     const textToHTML = str => <span  className="text-justify" dangerouslySetInnerHTML={{__html: str}}></span>
     
-    const retorno = pergfaq.filtrarCategoriaPergunta(categoria,pergunta).map(resp=>{
+    const retorno = faqFunctions.filtrarCategoriaPergunta(categoria,pergunta).map(resp=>{
         
         return resp.resposta.map((el,index)=>{
             if(el.text){
@@ -34,4 +33,6 @@ export default function Resposta( { categoria, pergunta } = props ){
     });
 
     return <div style={{margin:0,padding:1 }} >{ retorno} </div>
+   
+   return "ola"
 }

@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/model/classFaq.ts"  ],
   "exclude": [
     "node_modules",
     ".local",

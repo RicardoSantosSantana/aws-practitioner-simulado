@@ -5,19 +5,17 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import classFaq from "../../model/classFaq.ts";
-
+import { faqFunctions } from "../../functions/faq";
  
-export default function Conteudo( { theme } = props ){
+export default function Conteudo( { theme,dados } = props ){
    
-  const Faq = new classFaq();
-
-  const categorias = Faq.categorias.map((el,index)=>{
+  faqFunctions.dados = dados
+  
+  const categorias = faqFunctions.categorias().map((el,index)=>{
       return <MenuItem   theme={theme} key={'menuitem_'+index} value={el}>{el}</MenuItem>
   });
 
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('');
-
  
   const handleChange = (event) => {
     setCategoriaSelecionada(event.target.value);
@@ -42,7 +40,7 @@ export default function Conteudo( { theme } = props ){
         </Select>
       </FormControl>
     </Box>
-    <Categoria  theme={theme} key="cat" categoria={categoriaSelecionada} />
+    <Categoria  dados={dados} theme={theme} key="cat" categoria={categoriaSelecionada} />
     </>  
     
   ); 

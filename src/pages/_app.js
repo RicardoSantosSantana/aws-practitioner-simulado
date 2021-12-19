@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import { AwsSimulacao } from '../context/Index';
- 
 
 function MyApp({ Component, pageProps }) {
- 
+
   return (
     <>
       <Head>

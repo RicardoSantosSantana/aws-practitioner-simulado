@@ -1,17 +1,10 @@
-import classFaq from "../../model/classFaq.ts";
 import Resposta from "./Resposta";
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-
-import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
-import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
-import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-import AppsIcon from '@mui/icons-material/Apps';
-import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
+import { faqFunctions } from '../../functions/faq'
+ 
 export default function Pergunta( { theme, chave, categoria } = props ){
   
-  const pergfaq = new classFaq();
-
   const Root = styled('div')(({ theme }) => ({
     width: '100%',
     ...theme.typography.body2,
@@ -21,7 +14,7 @@ export default function Pergunta( { theme, chave, categoria } = props ){
   }));
  
  const retorno =()=> {
-      return pergfaq.filtrarCategoria(categoria).map((el,index)=>{
+      return faqFunctions.filtrarCategoria(categoria).map((el,index)=>{
         return ( 
               <Root key={ "resposta_"+ chave+index } sx={{  border:1, borderColor:'#dcdcdc',borderRadius:2, p:2,m:0,mb:2 }}>
                 <Typography  theme={ theme }  sx={{
