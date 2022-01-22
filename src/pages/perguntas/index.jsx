@@ -6,23 +6,20 @@ import Container from '@mui/material/Container';
 import { ContextSimulacao } from '../../context/Index';
 import { useContext, useEffect } from "react";
 import axios from 'axios';
-
-IndexPerguntas.getInitialProps = async()=> {
-
-    const response = await axios.get('https://aws-api-theta.vercel.app/api/faq')
-    return {     
-            dados: response.data         
-    }
+ 
+IndexPerguntas.getInitialProps = async()=> {          
+    //const response = await axios.get('https://aws-api-theta.vercel.app/api/faq')
+    const response = await axios.get(`${process.env.API_URL}/faq`)     
+    return { dados: response.data }
 }   
 
 export default function  IndexPerguntas( { dados } ){
     const {  theme, mode, setMode, dadosJson, setDadosJson } = useContext(ContextSimulacao);
-
-    useEffect(()=>{
+  
+    useEffect(()=>{         
         setDadosJson(dados)
     })
-     
-    
+         
     return (<>
         
         <Bar theme={ theme }  mode={ mode } setMode = { setMode } titleRight={<LikeDislike   show="false" theme={ theme }/> } titleLeft="Perguntas">
