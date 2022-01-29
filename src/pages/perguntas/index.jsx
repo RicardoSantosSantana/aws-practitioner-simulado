@@ -8,8 +8,7 @@ import { useContext, useEffect } from "react";
 import axios from 'axios';
  
 IndexPerguntas.getInitialProps = async()=> {          
-    //const response = await axios.get('https://aws-api-theta.vercel.app/api/faq')
-    const response = await axios.get(`${process.env.API_URL}/faq`)     
+    const response = await axios.get('https://aws-api-theta.vercel.app/api/faq')    
     return { dados: response.data }
 }   
 

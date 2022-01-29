@@ -1,4 +1,5 @@
 export default function exercicio(req,res) {
+    
     const data = [
         {
          "pergunta": "Por que a AWS é mais econômica do que os datacenters tradicionais para aplicações com diferentes workloads de computação?",
