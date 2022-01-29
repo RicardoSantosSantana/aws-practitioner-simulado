@@ -1,9 +1,13 @@
 import Image from 'next/image'
+import absoluteUrl from 'next-absolute-url'
 import Link from '@mui/material/Link';
 
 export default function Top(){
+  
+    const { origin } = absoluteUrl()
+       
     const myLoader = ({ src, width, quality }) => {
-        return `http://localhost/${src}?w=${width}&q=${quality || 100}`
+        return `${origin}${src}?w=${width}&q=${quality || 100}`
       }
     return (
     <>
