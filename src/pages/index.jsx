@@ -6,6 +6,7 @@ import React, { useContext, useEffect } from "react";
 import axios from 'axios';
 
 Home.getInitialProps = async()=> {
+    //teste
     //const response = await axios.get('https://aws-api-theta.vercel.app/api/exercicio')
     const response = await axios.get(`${process.env.API_URL}/exercicios`)    
     return {     
