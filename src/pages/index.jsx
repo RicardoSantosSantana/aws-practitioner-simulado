@@ -3,7 +3,7 @@ import Exercicio from "../components/exercicio"
 import LikeDislike from "../components/exercicio/LikeDislike"
 import { ContextSimulacao } from "../context/Index";
 import React, { useContext, useEffect } from "react";
-import axios from 'axios';
+import axios from 'axios'; 
 
 Home.getInitialProps = async()=> {
     
@@ -20,7 +20,7 @@ export default function Home( { dados }){
         setDadosJson(dados)
     }) 
     return ( 
-        <Bar show="true" theme={ theme }  mode={ mode } setMode = { setMode } titleRight={<LikeDislike theme={ theme }/> } titleLeft="Exercícios"> 
+        <Bar show="true" theme={ theme }  mode={ mode } setMode = { setMode } titleRight={<LikeDislike theme={ theme }/> } titleLeft="Exercícios">        
             <Exercicio theme={ theme }/> 
         </Bar> 
     )

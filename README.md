@@ -7,4 +7,8 @@ First, run the development server:
 npm run dev
  
 ```
-## Aplicação simples para rodar tela com simulado de prova AWS Practitioner 
+## Simulado simples de prova AWS Practitioner 
+
+Tecnologia React e NextJs
+
+

@@ -1,8 +1,10 @@
 import Typography from '@mui/material/Typography';
+import Top from '../../components/profile/Top';
 
 export default function HeaderFaq( { theme } =props){
     return (
         <>
+         <Top></Top>
         <Typography theme={theme}  sx={{ mt:4 }} variant="h4">
             Perguntas para estudo AWS Practitioner 
         </Typography>

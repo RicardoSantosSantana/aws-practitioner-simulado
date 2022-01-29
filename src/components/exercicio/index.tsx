@@ -1,4 +1,6 @@
 import Container from '@mui/material/Container';
+import Top from "../../components/profile/Top";
+
 import Header from "./Header";
 import Questions from './Question';
 import { useContext } from 'react'
@@ -25,6 +27,7 @@ export default function Exercicio() {
 
         return ( 
             <Container> 
+                <Top></Top>
                 <Header theme={ theme } ></Header>                   
                 {simulado ?? ''}
             </Container>
