@@ -4,7 +4,7 @@ import Link from '@mui/material/Link';
 export default function Top(){
         
     const myLoader = ({ src, width, quality }) => {      
-        return `https://aws-practitioner-simulado.vercel.app./ricardo-santana.png?w=${width}&q=${quality || 100}`      
+        return `https://aws.ricardo.dev.br/ricardo-santana.png?w=${width}&q=${quality || 100}`      
       }
       
     return (
